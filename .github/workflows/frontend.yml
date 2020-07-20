@@ -1,0 +1,29 @@
+# Build React front page when frontend branch change
+
+name: Build Frontend Page
+
+on:
+  push:
+    branches: [ frontend ]
+  pull_request:
+    branches: [ frontend ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+    - name: install dep
+      run: npm ci
+    - name: build react
+      run: npm run build
+    - name: deploy to page branch
+      uses: miaowm5/ghaction-github-pages@v2.3.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
