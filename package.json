@@ -1,0 +1,27 @@
+{
+  "name": "rmproject2",
+  "version": "1.0.0",
+  "description": "RPG 制作大师授权素材推广计划 2.0",
+  "main": "index.js",
+  "dependencies": {
+    "fs-extra": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  },
+  "scripts": {
+    "buildRule": "node deploy/rule.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miaowm5/rmproject2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miaowm5/rmproject2/issues"
+  },
+  "homepage": "https://github.com/miaowm5/rmproject2#readme"
+}
