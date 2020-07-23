@@ -12,7 +12,8 @@
     "eslint-plugin-import": "^2.22.0"
   },
   "scripts": {
-    "buildRule": "node deploy/rule.js"
+    "buildRule": "node deploy/rule.js",
+    "build": "npm run buildRule"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,31 @@
+# Build Backend API when master branch change
+
+name: Build Backend API
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+    - name: install dep
+      run: npm ci
+    - name: build rule
+      run: npm run build
+    - name: deploy to page branch
+      uses: miaowm5/rmproject2@action
+      with:
+        deploy_type: 'backend'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
