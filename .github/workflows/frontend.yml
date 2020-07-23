@@ -24,7 +24,7 @@ jobs:
     - name: build react
       run: npm run build
     - name: deploy to page branch
-      uses: miaowm5/ghaction-rmproject2@v0.0.1
+      uses: miaowm5/rmproject2@action
       with:
         deploy_type: 'frontend'
       env:
