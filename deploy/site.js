@@ -34,7 +34,9 @@ const main = async ()=>{
     }
     if (!config.rule){ config.rule = [] }
     if (!config.rule2){ config.rule2 = [] }
+    if (!Array.isArray(config.rule2)){ config.rule2 = [config.rule2] }
     if (!config.comment){ config.comment = [] }
+    if (!Array.isArray(config.comment)){ config.comment = [config.comment] }
     result.push({
       id,
       name: config.name,
