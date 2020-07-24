@@ -1,0 +1,19 @@
+{
+  "name": "効果音ラボ",
+  "logo": "1.gif",
+  "owner": "Killy",
+  "language": ["日语", "英语", "中文"],
+  "gfw": false,
+  "category": ["音效"],
+  "url": "https://soundeffect-lab.info/",
+  "url3": "https://soundeffect-lab.info/agreement/",
+  "urlReg": ".*soundeffect-lab.*",
+  "rule": [1,2],
+  "rule2": "测试用数据，此规约为临时配置，非正式规约",
+  "author": "喵呜喵5",
+  "updateTime": "2017.6.19",
+  "comment": [
+    "本站的素材禁止用于表现同性恋的作品中",
+    "感谢 逍遥无叹 的投稿"
+  ]
+}
