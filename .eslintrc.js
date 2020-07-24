@@ -37,6 +37,7 @@ module.exports = {
     'react/no-array-index-key': 'off',
     'react/jsx-wrap-multilines': 'off',
     'react/jsx-closing-tag-location': 'off',
+    'react/jsx-one-expression-per-line': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
     semi: 'off',
@@ -52,7 +53,10 @@ module.exports = {
     'block-spacing': 'warn',
     'arrow-body-style': 'warn',
     'no-unused-vars': 'warn',
+    'padded-blocks': 'warn',
+    'react/jsx-indent': 'warn',
     'react/jsx-tag-spacing': 'warn',
     quotes: 'warn',
+    indent: 'warn',
   },
 };
