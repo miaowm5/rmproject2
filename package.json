@@ -13,7 +13,8 @@
   },
   "scripts": {
     "buildRule": "node deploy/rule.js",
-    "build": "npm run buildRule"
+    "buildSite": "node deploy/site.js",
+    "build": "npm run buildRule && npm run buildSite"
   },
   "repository": {
     "type": "git",
