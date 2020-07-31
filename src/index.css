@@ -10,4 +10,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
   position: relative;
+  margin: 0;
+  background-color: #151414;
+  color: white;
+}
+a {
+  color: white;
 }

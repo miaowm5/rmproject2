@@ -1,0 +1,21 @@
+
+.head{
+  background-color: #2a4269;
+  color: white;
+  padding: 2em 1em 4em;
+  border-bottom: 1px solid #777;
+  box-shadow: 1px 1px 10px black;
+  background-size: cover;
+  background-position: center center;
+}
+.head>h1{
+  max-width: 1024px;
+  font-size: 2.5em;
+  margin: 0 auto;
+  text-shadow: 0 0 15px black;
+}
+.head>h1>span{
+  font-size: .5em;
+  padding-bottom: .5em;
+  display: block;
+}

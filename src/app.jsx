@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react'
+import Header from './header'
 import { useAPI, ctx } from './common'
+import styles from './app.module.css'
 
 const { useCtx: useGlobalCtx, Provider: GlobalCtx } = ctx()
 
@@ -60,8 +62,10 @@ const Site = ({ site })=>{
 const Main = ()=>{
   const { site } = useGlobalCtx()
   return <div>
-    <h1>授权素材推广计划</h1>
-    {site.map((item)=><Site key={item.id} site={item} />)}
+    <Header />
+    <div className={styles.body}>
+      {site.map((item)=><Site key={item.id} site={item} />)}
+    </div>
   </div>
 }
 
