@@ -54,6 +54,7 @@ module.exports = {
     'arrow-body-style': 'warn',
     'no-unused-vars': 'warn',
     'padded-blocks': 'warn',
+    'key-spacing': 'warn',
     'react/jsx-indent': 'warn',
     'react/jsx-tag-spacing': 'warn',
     quotes: 'warn',
