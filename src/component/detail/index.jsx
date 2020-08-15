@@ -18,6 +18,7 @@ const List = ({ param })=><ul>
 const Main = ({ content })=>{
   if (!content || !Array.isArray(content)){ return null }
   return <>{content.map((line, key)=>{
+    if (!line){ return null }
     const { type } = line
     const param = line.param || []
     if (type === 'text'){ return <Text key={key} param={param} /> }

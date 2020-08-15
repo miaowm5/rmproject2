@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Header, Error, Loading } from '../component'
+import { Header, Error, Loading, Detail } from '../component'
 import { useAPI } from '../common'
 import styles from './index.module.css'
 
@@ -16,7 +16,7 @@ const Rule = ({ rule })=><p><a href={`#!rule/${rule.id}`} className={styles.rule
   <img src={`./media/rule/${rule.image}.jpg`} alt={rule.name} />
 </a></p>
 
-const Detail = ({ data })=><div>
+const Main = ({ data })=><div>
   {data.logo && <div><img src={`./media/site/${data.logo}`} alt="logo" /></div>}
   <p>站点名称：{data.name}</p>
   <p>站长：{data.owner}</p>
@@ -29,28 +29,28 @@ const Detail = ({ data })=><div>
   <div>
     <p>原文：<a href={data.url3} target="_blank" rel="noopener noreferrer">{data.url3}</a></p>
     <RuleList list={data.rule} />
-    {data.rule2.map((c, i)=><p key={i}>{c}</p>)}
+    <Detail content={data.rule2} />
     <p>（翻译By {data.author} 确认时间 {data.updateTime}）</p>
   </div>
   {data.comment.length > 0 && <>
     <p>备注：</p>
-    {data.comment.map((c, i)=><p key={i}>{c}</p>)}
+    <Detail content={data.comment} />
   </>}
 </div>
 
-const SiteMain = ({ id })=>{
+const Body = ({ id })=>{
   const site = useAPI(`./api/site/${id}.json`)
   return <div>
     <Header />
     <div className={styles.body}>
       {site.state === 'fail' && <Error title="get site fail" error={site.result} />}
       {site.state === 'load' && <Loading />}
-      {site.state === 'success' && <Detail data={site.result} />}
+      {site.state === 'success' && <Main data={site.result} />}
     </div>
   </div>
 }
 
 export default ({ id })=>{
   if (!id){ return null }
-  return <SiteMain id={id} />
+  return <Body id={id} />
 }
