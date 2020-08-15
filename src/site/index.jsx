@@ -4,14 +4,6 @@ import { Header, Error, Loading, Detail } from '../component'
 import { useAPI } from '../common'
 import styles from './index.module.css'
 
-const RuleList = ({ list })=>{
-  const rule = useAPI('./api/rule.json')
-  if (rule.state === 'fail'){ return <Error title="get rule fail" error={rule.result} /> }
-  if (rule.state === 'load'){ return <Loading /> }
-  const database = rule.result
-  return <>{list.map((id, i)=><Rule key={i} rule={database[id]} />)}</>
-}
-
 const Rule = ({ rule })=><p><a href={`#!rule/${rule.id}`} className={styles.rule}>
   <img src={`./media/rule/${rule.image}.jpg`} alt={rule.name} />
 </a></p>
@@ -28,7 +20,7 @@ const Main = ({ data })=><div>
   <p>素材利用规约：</p>
   <div>
     <p>原文：<a href={data.url3} target="_blank" rel="noopener noreferrer">{data.url3}</a></p>
-    <RuleList list={data.rule} />
+    <>{data.rule.map((rule, i)=><Rule key={i} rule={rule} />)}</>
     <Detail content={data.rule2} />
     <p>（翻译By {data.author} 确认时间 {data.updateTime}）</p>
   </div>
