@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Header, Error, Loading } from '../component'
+import { Header, Error, Detail, Loading } from '../component'
 import { useAPI } from '../common'
 import styles from './index.module.css'
 
@@ -9,7 +9,7 @@ const Rule = ({ rule })=>{
   return <div>
     <h3>{rule.name}</h3>
     <img src={`./media/rule/${rule.image}.jpg`} alt={rule.name} />
-    <div>{rule.detail.map((line, i)=><p key={i}>{line}</p>)}</div>
+    <div><Detail content={rule.detail} /></div>
   </div>
 }
 
