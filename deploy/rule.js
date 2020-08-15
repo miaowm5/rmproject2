@@ -1,21 +1,12 @@
 
 const fse = require('fs-extra')
 const path = require('path')
+const getRuleData = require('./getRuleData')
 
 const mainPath = path.join(__dirname, '../')
-const rulePath = path.join(mainPath, 'rule')
 
 const main = async ()=>{
-  const result = {}
-  const fileList = await fse.readdir(rulePath)
-  fileList.forEach((filename)=>{
-    if (!filename.endsWith('.json')) return
-    const id = filename.slice(0, filename.length - 5) - 0
-    if (!id) return
-    const config = JSON.parse(fse.readFileSync(path.join(rulePath, filename)).toString())
-    config.id = id
-    result[id] = config
-  })
+  const result = await getRuleData()
 
   const targetPath = path.join(mainPath, 'build/api')
   await fse.ensureDir(targetPath)

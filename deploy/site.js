@@ -1,11 +1,14 @@
 
 const fse = require('fs-extra')
 const path = require('path')
+const getRuleData = require('./getRuleData')
 
 const mainPath = path.join(__dirname, '../')
 const sitePath = path.join(mainPath, 'site')
 
 const main = async ()=>{
+  const ruleData = await getRuleData()
+
   const targetPath = path.join(mainPath, 'build/api')
   const siteTargetPath = path.join(targetPath, 'site')
   await fse.ensureDir(siteTargetPath)
@@ -32,7 +35,15 @@ const main = async ()=>{
       const url = config.url || ''
       config.urlReg = url.replace('https://', '').replace('http://', '').replace(/\./g, '\\.')
     }
-    if (!config.rule){ config.rule = [] }
+    if (!config.rule){
+      config.rule = []
+    }else{
+      config.rule = Array.from(new Set(config.rule)).map((ruleID)=>{
+        const rule = ruleData[ruleID]
+        if (!rule){ throw new Error(`site ${id} rule ${ruleID} missing!`) }
+        return { id: ruleID, name: rule.name, image: rule.image }
+      })
+    }
     if (!config.rule2){ config.rule2 = [] }
     if (!Array.isArray(config.rule2)){ config.rule2 = [config.rule2] }
     if (!config.comment){ config.comment = [] }
