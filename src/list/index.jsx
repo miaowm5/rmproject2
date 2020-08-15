@@ -1,7 +1,6 @@
 
 import React from 'react'
-import Header from '../header'
-import Error from '../error'
+import { Header, Error } from '../component'
 import { useAPI } from '../common'
 import styles from './index.module.css'
 
