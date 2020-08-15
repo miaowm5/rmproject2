@@ -1,13 +1,13 @@
 
 import React from 'react'
-import { Header, Error } from '../component'
+import { Header, Error, Loading } from '../component'
 import { useAPI } from '../common'
 import styles from './index.module.css'
 
 const RuleList = ({ list })=>{
   const rule = useAPI('./api/rule.json')
   if (rule.state === 'fail'){ return <Error title="get rule fail" error={rule.result} /> }
-  if (rule.state === 'load'){ return <div>loading...</div> }
+  if (rule.state === 'load'){ return <Loading /> }
   const database = rule.result
   return <>{list.map((id, i)=><Rule key={i} rule={database[id]} />)}</>
 }
@@ -40,11 +40,13 @@ const Detail = ({ data })=><div>
 
 const SiteMain = ({ id })=>{
   const site = useAPI(`./api/site/${id}.json`)
-  if (site.state === 'fail'){ return <Error title="get site fail" error={site.result} /> }
-  if (site.state === 'load'){ return <div className={styles.body}>loading...</div> }
   return <div>
     <Header />
-    <div className={styles.body}><Detail data={site.result} /></div>
+    <div className={styles.body}>
+      {site.state === 'fail' && <Error title="get site fail" error={site.result} />}
+      {site.state === 'load' && <Loading />}
+      {site.state === 'success' && <Detail data={site.result} />}
+    </div>
   </div>
 }
 

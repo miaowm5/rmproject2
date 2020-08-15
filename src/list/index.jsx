@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Header, Error } from '../component'
+import { Header, Error, Loading } from '../component'
 import { useAPI } from '../common'
 import styles from './index.module.css'
 
@@ -11,12 +11,14 @@ const Site = ({ site })=><div className={styles.item}>
 
 export default ()=>{
   const site = useAPI('./api/site.json')
-  if (site.state === 'fail'){ return <Error title="get site fail" error={site.result} /> }
-  if (site.state === 'load'){ return <div className={styles.body}>loading...</div> }
-  return <div>
+  return <>
     <Header />
     <div className={styles.body}>
-      {site.result.map((item)=><Site key={item.id} site={item} />)}
+      {site.state === 'fail' && <Error title="get site fail" error={site.result} />}
+      {site.state === 'load' && <Loading />}
+      {site.state === 'success' && <>
+        {site.result.map((item)=><Site key={item.id} site={item} />)}
+      </>}
     </div>
-  </div>
+  </>
 }

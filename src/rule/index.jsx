@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Header, Error } from '../component'
+import { Header, Error, Loading } from '../component'
 import { useAPI } from '../common'
 import styles from './index.module.css'
 
@@ -15,12 +15,14 @@ const Rule = ({ rule })=>{
 
 const RuleMain = ({ id })=>{
   const rule = useAPI('./api/rule.json')
-  if (rule.state === 'fail'){ return <Error title="get site fail" error={rule.result} /> }
-  if (rule.state === 'load'){ return <div className={styles.body}>loading...</div> }
-  return <div>
+  return <>
     <Header />
-    <div className={styles.body}><Rule rule={rule.result[id]} /></div>
-  </div>
+    <div className={styles.body}>
+      {rule.state === 'fail' && <Error title="get site fail" error={rule.result} />}
+      {rule.state === 'load' && <Loading />}
+      {rule.state === 'success' && <Rule rule={rule.result[id]} />}
+    </div>
+  </>
 }
 
 export default ({ id })=>{
