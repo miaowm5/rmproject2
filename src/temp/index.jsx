@@ -11,6 +11,7 @@ const List = ({ data })=><>{data.map((post)=><p key={post.permalink}><a href={`#
 const Content = ({ data, id })=>{
   if (!id){ return null }
   const post = data.find((item)=>item.permalink === id)
+  if (!post){ return null }
   return <div dangerouslySetInnerHTML={{ __html: post.content }} /> // eslint-disable-line
 }
 
