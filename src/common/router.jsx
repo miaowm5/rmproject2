@@ -6,7 +6,7 @@ const RouterCtx = React.createContext(null)
 const handleHash = ()=>{
   let { hash } = window.location
   if (!hash.startsWith('#!')){ return { page: 'index' } }
-  hash = hash.split("?")[0]
+  [hash] = hash.split('?')
   hash = hash.slice(2, hash.length).split('/')
   const page = hash.shift()
   if (hash.length > 0 && hash[hash.length - 1] === ''){ hash.pop() }
