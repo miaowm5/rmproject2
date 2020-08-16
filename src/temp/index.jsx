@@ -1,12 +1,24 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Header, Error, Loading } from '../component'
 import { useAPI, router } from '../common'
 import styles from './index.module.css'
 
-const List = ({ data })=><>{data.map((post)=><p key={post.permalink}><a href={`#!temp/${post.permalink}`}>
-  {post.title}
-</a></p>)}</>
+const List = ({ data })=>{
+  const [category, setCategory] = useState('3e26fe_')
+  return <div>
+    <div className={styles.listTab}>
+      <div onClick={()=>setCategory('3b5924_')}>主站</div>
+      <div onClick={()=>setCategory('3e26fe_')}>仓库</div>
+    </div>
+    <div className={styles.listMain}>{data.map((post)=>{
+      if (!post.permalink.startsWith(category)){ return null }
+      return <p key={post.permalink}><a href={`#!temp/${post.permalink}`}>
+        {post.title}
+      </a></p>
+    })}</div>
+  </div>
+}
 
 const Content = ({ data, id })=>{
   if (!id){ return null }
