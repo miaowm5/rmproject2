@@ -1,0 +1,7 @@
+{
+  "name": "加工后可发布",
+  "image": "1",
+  "detail": [
+    {"type":"text", "param": ["TODO"]}
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "允许加工",
+  "image": "1",
+  "detail": [
+    {"type":"text", "param": ["TODO"]}
+  ]
+}
