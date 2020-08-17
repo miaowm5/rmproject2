@@ -1,0 +1,29 @@
+{
+  "name": "Lemon Slice",
+  "logo": "1.gif",
+  "owner": "",
+  "language": [
+    "日语"
+  ],
+  "gfw": false,
+  "category": [
+    "音效"
+  ],
+  "url": "https://soundeffect-lab.info/",
+  "url3": "https://soundeffect-lab.info/agreement/",
+  "urlReg": ".*soundeffect-lab.*",
+  "rule": [
+    101
+  ],
+  "rule2": [
+    {
+      "type": "text",
+      "param": [
+        "测试用数据，此规约为临时配置，非正式规约"
+      ]
+    }
+  ],
+  "author": "喵呜喵5",
+  "updateTime": "2020.8.17",
+  "comment": []
+}
