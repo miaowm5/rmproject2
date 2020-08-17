@@ -1,6 +1,6 @@
 {
-  "name": "基本规则",
-  "image": "1",
+  "name": "使用责任、规约补充",
+  "image": "106",
   "detail": [
     {"type":"text", "param": ["TODO"]}
   ]

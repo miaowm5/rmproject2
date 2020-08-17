@@ -1,6 +1,6 @@
 {
   "name": "基本规则",
-  "image": "1",
+  "image": "101",
   "detail": [
     {"type":"text", "param": ["TODO"]}
   ]

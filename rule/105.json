@@ -1,6 +1,6 @@
 {
   "name": "禁止用在问题游戏中",
-  "image": "1",
+  "image": "105",
   "detail": [
     {"type":"text", "param": ["TODO"]}
   ]
