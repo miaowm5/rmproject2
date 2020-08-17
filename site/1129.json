@@ -17,9 +17,10 @@
   ],
   "rule2": [
     {
-      "type": "text",
+      "type": "link",
       "param": [
-        "测试用数据，此规约为临时配置，非正式规约"
+        "原文",
+        "https://miaowm5.github.io/rmproject2/#!temp/3b5924_18f4af1"
       ]
     }
   ],
