@@ -15,6 +15,10 @@ const List = ({ param })=><ul>
   {param.map((content, key)=><li key={key}>{content}</li>)}
 </ul>
 
+const RuleImage = ({ param })=><p><a href={`#!rule/${param[0]}`}>
+  <img alt={param[1]} src={`./media/rule/${param[2]}.jpg`} />
+</a></p>
+
 const Main = ({ content })=>{
   if (!content || !Array.isArray(content)){ return null }
   return <>{content.map((line, key)=>{
@@ -24,6 +28,7 @@ const Main = ({ content })=>{
     if (type === 'text'){ return <Text key={key} param={param} /> }
     if (type === 'link'){ return <Link key={key} param={param} /> }
     if (type === 'list'){ return <List key={key} param={param} /> }
+    if (type === 'ruleImage'){ return <RuleImage key={key} param={param} /> }
     return <p key={key}>Unknow type: {type}</p>
   })}</>
 }
