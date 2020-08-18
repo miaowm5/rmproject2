@@ -9,18 +9,18 @@ const Rule = ({ rule })=>{
   return <div>
     <h3>{rule.name}</h3>
     <img src={`./media/rule/${rule.image}.jpg`} alt={rule.name} />
-    <div><Detail content={rule.detail} /></div>
+    <div><Detail content={rule.detailParse} /></div>
   </div>
 }
 
 const RuleMain = ({ id })=>{
-  const rule = useAPI('./api/rule.json')
+  const rule = useAPI(`./api/rule/${id}.json`)
   return <>
     <Header />
     <div className={styles.body}>
       {rule.state === 'fail' && <Error title="get site fail" error={rule.result} />}
       {rule.state === 'load' && <Loading />}
-      {rule.state === 'success' && <Rule rule={rule.result[id]} />}
+      {rule.state === 'success' && <Rule rule={rule.result} />}
       <a href={`${process.env.REACT_APP_SITE_REPO_URL}/edit/master/rule/${id}.json`} target="_blank" rel="noopener noreferrer">在 github 上编辑</a>
     </div>
   </>
