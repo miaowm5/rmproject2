@@ -1,14 +1,9 @@
 
 const fse = require('fs-extra')
 const path = require('path')
-const getRuleData = require('./getRuleData')
 
-const mainPath = path.join(__dirname, '../')
-const sitePath = path.join(mainPath, 'site')
-
-const main = async ()=>{
-  const ruleData = await getRuleData()
-
+module.exports = async (mainPath, ruleData)=>{
+  const sitePath = path.join(mainPath, 'site')
   const targetPath = path.join(mainPath, 'build/api')
   const siteTargetPath = path.join(targetPath, 'site')
   await fse.ensureDir(siteTargetPath)
@@ -65,5 +60,3 @@ const main = async ()=>{
   await fse.emptyDir(targetMediaPath)
   fse.copy(path.join(mainPath, 'site/media'), targetMediaPath)
 }
-
-main().catch((e)=>{ console.error(e) })

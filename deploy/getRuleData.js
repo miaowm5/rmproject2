@@ -2,10 +2,8 @@
 const fse = require('fs-extra')
 const path = require('path')
 
-const mainPath = path.join(__dirname, '../')
-const rulePath = path.join(mainPath, 'rule')
-
-module.exports = async ()=>{
+module.exports = async (mainPath)=>{
+  const rulePath = path.join(mainPath, 'rule')
   const result = {}
   const fileList = await fse.readdir(rulePath)
   fileList.forEach((filename)=>{

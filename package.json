@@ -13,9 +13,7 @@
     "eslint-plugin-import": "^2.22.0"
   },
   "scripts": {
-    "buildRule": "node deploy/rule.js",
-    "buildSite": "node deploy/site.js",
-    "build": "npm run buildRule && npm run buildSite",
+    "build": "node deploy/index.js",
     "server": "npm run build && npx anywhere -s -d build"
   },
   "repository": {
