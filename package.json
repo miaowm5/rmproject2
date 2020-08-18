@@ -14,7 +14,9 @@
   },
   "scripts": {
     "build": "node deploy/index.js",
-    "server": "npm run build && npx anywhere -s -d build"
+    "server": "npm run build && npx anywhere -s -d build",
+    "lint": "eslint --ext .js deploy",
+    "lint-fix": "eslint --fix --ext .js deploy"
   },
   "repository": {
     "type": "git",
