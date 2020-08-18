@@ -6,7 +6,13 @@
     {"type":"rule", "param": [103]},
     {"type":"rule", "param": [104]},
     {"type":"rule", "param": [105]},
+    {"type":"rule", "param": [106]},
     {"type":"rule", "param": [107]},
-    {"type":"rule", "param": [106]}
+    {"type":"text", "param": [""]},
+    {"type":"text", "param": ["部分图片素材的作者允许以下面这种方式转载素材："]},
+    {"type":"text", "param": ["帖子标题：《我很喜欢XXX网站的素材，谁能做出风格类似的素材？》"]},
+    {"type":"text", "param": ["帖子正文："]},
+    {"type":"list", "param": ["贴出XXX网站的地址以及素材作者等必要信息。", "贴出XXX网站的其中一张素材图片。"]},
+    {"type":"text", "param": ["不过，在规则没有写明的情况下，为了避免风险，我们不建议你转载素材。想要与他人分享这个素材的话，你可以分享我们页面的地址。"]}
   ]
 }
