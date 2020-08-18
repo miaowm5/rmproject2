@@ -36,7 +36,7 @@ const Body = ({ data })=>{
 }
 
 export default ()=>{
-  const data = useAPI('https://miaowm5.github.io/rmproject/tempData.json')
+  const data = useAPI(process.env.REACT_APP_TEMP_DATA_URL)
   return <>
     <Header />
     <div className={styles.body}>

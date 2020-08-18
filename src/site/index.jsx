@@ -38,6 +38,7 @@ const Body = ({ id })=>{
       {site.state === 'fail' && <Error title="get site fail" error={site.result} />}
       {site.state === 'load' && <Loading />}
       {site.state === 'success' && <Main data={site.result} />}
+      <a href={`${process.env.REACT_APP_SITE_REPO_URL}/edit/master/site/${id}.json`} target="_blank" rel="noopener noreferrer">在 github 上编辑</a>
     </div>
   </div>
 }
