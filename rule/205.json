@@ -2,6 +2,10 @@
   "name": "不需要报告",
   "image": "205",
   "detail": [
-    {"type":"text", "param": ["TODO"]}
+    {"type":"text", "param": [""]},
+    {"type":"rule", "param": [203]},
+    {"type":"rule", "param": [204]},
+    {"type":"text", "param": [""]},
+    {"type":"text", "param": ["另外，大部分素材作者还是希望你使用素材时能够报告他们的（非强制性要求），你的报告对于素材的作者来说是很大的鼓励。"]}
   ]
 }

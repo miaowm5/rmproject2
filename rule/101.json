@@ -2,6 +2,7 @@
   "name": "基本规则",
   "image": "101",
   "detail": [
+    {"type":"text", "param": [""]},
     {"type":"rule", "param": [102]},
     {"type":"rule", "param": [103]},
     {"type":"rule", "param": [104]},
