@@ -2,6 +2,21 @@
 const fse = require('fs-extra')
 const path = require('path')
 
+const handleRule = (config, siteID, ruleData)=>{
+  if (!config.rule){ config.rule = [] }
+  if (!config.rule2){ config.rule2 = [] }
+  if (!Array.isArray(config.rule2)){ config.rule2 = [config.rule2] }
+  const ruleBasic = Array.from(new Set(config.rule)).map((ruleID)=>{
+    const rule = ruleData[ruleID]
+    if (!rule){ throw new Error(`site ${siteID} rule ${ruleID} missing!`) }
+    return {
+      type: 'ruleImage',
+      param: [ruleID, rule.name, rule.image],
+    }
+  })
+  return ruleBasic.concat(config.rule2)
+}
+
 module.exports = async (mainPath, ruleData)=>{
   const sitePath = path.join(mainPath, 'site')
   const targetPath = path.join(mainPath, 'build/api')
@@ -30,17 +45,7 @@ module.exports = async (mainPath, ruleData)=>{
       const url = config.url || ''
       config.urlReg = url.replace('https://', '').replace('http://', '').replace(/\./g, '\\.')
     }
-    if (!config.rule){
-      config.rule = []
-    }else{
-      config.rule = Array.from(new Set(config.rule)).map((ruleID)=>{
-        const rule = ruleData[ruleID]
-        if (!rule){ throw new Error(`site ${id} rule ${ruleID} missing!`) }
-        return { id: ruleID, name: rule.name, image: rule.image }
-      })
-    }
-    if (!config.rule2){ config.rule2 = [] }
-    if (!Array.isArray(config.rule2)){ config.rule2 = [config.rule2] }
+    config.ruleParse = handleRule(config, id, ruleData)
     if (!config.comment){ config.comment = [] }
     if (!Array.isArray(config.comment)){ config.comment = [config.comment] }
     result.push({
