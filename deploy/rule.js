@@ -5,7 +5,7 @@ const path = require('path')
 module.exports = async (mainPath, ruleData)=>{
   const targetPath = path.join(mainPath, 'build/api/rule')
   await fse.ensureDir(targetPath)
-  await fse.writeFile(path.join(targetPath, 'rule.json'), JSON.stringify(ruleData))
+  await fse.writeFile(path.join(mainPath, 'build/api/rule.json'), JSON.stringify(ruleData))
   const taskList = []
   Object.keys(ruleData).forEach((id)=>{
     const data = ruleData[id]
