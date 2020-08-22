@@ -1,7 +1,8 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Header, Error, Loading, Detail } from '../component'
 import { useAPI } from '../common'
+import Edit from './edit'
 import styles from './index.module.css'
 
 const Main = ({ data })=><div>
@@ -25,6 +26,15 @@ const Main = ({ data })=><div>
   </>}
 </div>
 
+const Content = ({ data })=>{
+  const [edit, setEdit] = useState(false)
+  if (edit){ return <Edit.Main closeEdit={()=>setEdit(false)} data={data} /> }
+  return <>
+    <Main data={data} />
+    <Edit.Button openEdit={()=>setEdit(true)} />
+  </>
+}
+
 const Body = ({ id })=>{
   const site = useAPI(`./api/site/${id}.json`)
   return <div>
@@ -32,8 +42,7 @@ const Body = ({ id })=>{
     <div className={styles.body}>
       {site.state === 'fail' && <Error title="get site fail" error={site.result} />}
       {site.state === 'load' && <Loading />}
-      {site.state === 'success' && <Main data={site.result} />}
-      <a href={`${process.env.REACT_APP_SITE_REPO_URL}/edit/master/site/${id}.json`} target="_blank" rel="noopener noreferrer">在 github 上编辑</a>
+      {site.state === 'success' && <Content data={site.result} />}
     </div>
   </div>
 }
