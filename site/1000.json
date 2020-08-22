@@ -1,7 +1,7 @@
 {
   "name": "Cnoc",
   "logo": "1.gif",
-  "owner": "",
+  "owner": "ポラッカ",
   "language": [
     "日语"
   ],
@@ -9,8 +9,8 @@
   "category": [
     "音效"
   ],
-  "url": "https://soundeffect-lab.info/",
-  "url3": "https://soundeffect-lab.info/agreement/",
+  "url": "https://cnoc.web.fc2.com/",
+  "url3": "https://cnoc.web.fc2.com/rule.html",
   "urlReg": ".*soundeffect-lab.*",
   "rule": [
     101
@@ -26,5 +26,6 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "url2": "https://cnoc.web.fc2.com/"
 }
