@@ -1,7 +1,7 @@
 {
   "name": "Cnoc",
   "logo": "1.gif",
-  "owner": "",
+  "owner": "阿萨斯",
   "language": [
     "日语"
   ],
@@ -26,5 +26,6 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "url2": "https://soundeffect-lab.info/"
 }
