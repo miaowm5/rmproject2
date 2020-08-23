@@ -1,7 +1,7 @@
 {
   "name": "かうべる",
   "logo": "1.gif",
-  "owner": "",
+  "owner": "こあとる（カウ）",
   "language": [
     "日语"
   ],
@@ -9,8 +9,8 @@
   "category": [
     "音效"
   ],
-  "url": "https://soundeffect-lab.info/",
-  "url3": "https://soundeffect-lab.info/agreement/",
+  "url": "http://www5e.biglobe.ne.jp/~cawcaw/index.htm",
+  "url3": "http://www5e.biglobe.ne.jp/~cawcaw/midi/kiyaku.htm",
   "urlReg": ".*soundeffect-lab.*",
   "rule": [
     101
@@ -26,5 +26,6 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "url2": "http://www5e.biglobe.ne.jp/~cawcaw/midi/miditop.htm"
 }
