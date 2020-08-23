@@ -13,7 +13,10 @@ const Main = ({ data })=><div>
   <p>站点地址：<a href={data.url} target="_blank" rel="noopener noreferrer">{data.url}</a></p>
   <p>语言：{data.language.join('、')}</p>
   <p>墙？：{data.gfw ? '有' : '无'}</p>
-  <p>素材内容：{data.category.map((c)=>`${c}素材`).join('、')}</p>
+  <p>素材内容：
+    {data.category.join('、')}
+    {data.category2.length > 0 && data.category2.map((cat)=>cat[1]).join('、')}
+  </p>
   <p>素材地址：<a href={data.url2} target="_blank" rel="noopener noreferrer">{data.url2}</a></p>
   <p>素材利用规约：</p>
   <div>

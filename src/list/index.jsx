@@ -9,7 +9,7 @@ const Site = ({ site })=><div className={styles.item}>
     {site.close && '【已关站】'}
     {site.name}
   </a>
-  <div>{site.category.map((c, i)=><p className={styles.tag} key={i}>{c}素材</p>)}</div>
+  <div>{site.category.map((c, i)=><p className={styles.tag} key={i}>{c}</p>)}</div>
 </div>
 
 export default ()=>{
