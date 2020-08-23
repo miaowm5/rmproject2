@@ -1,7 +1,7 @@
 {
   "name": "em.---mk.",
   "logo": "1.gif",
-  "owner": "",
+  "owner": "えむ",
   "language": [
     "日语"
   ],
@@ -9,8 +9,8 @@
   "category": [
     "音效"
   ],
-  "url": "https://soundeffect-lab.info/",
-  "url3": "https://soundeffect-lab.info/agreement/",
+  "url": "http://em--mk.xrea.bz/index.htm",
+  "url3": "http://em--mk.xrea.bz/index.htm",
   "urlReg": ".*soundeffect-lab.*",
   "rule": [
     101
@@ -26,5 +26,6 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "url2": "http://em--mk.xrea.bz/music/list.php"
 }
