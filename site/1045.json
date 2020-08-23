@@ -1,7 +1,7 @@
 {
   "name": "soundseekers blog",
   "logo": "1.gif",
-  "owner": "",
+  "owner": "soundseekers blog",
   "language": [
     "日语"
   ],
@@ -9,8 +9,8 @@
   "category": [
     "音效"
   ],
-  "url": "https://soundeffect-lab.info/",
-  "url3": "https://soundeffect-lab.info/agreement/",
+  "url": "http://blog.mno3.jp/soundseekrs_blog/",
+  "url3": "http://blog.mno3.jp/soundseekrs_blog/post.html",
   "urlReg": ".*soundeffect-lab.*",
   "rule": [
     101
@@ -26,5 +26,6 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "url2": "http://blog.mno3.jp/soundseekrs_blog/allarticle.html"
 }
