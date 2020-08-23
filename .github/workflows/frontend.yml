@@ -5,8 +5,6 @@ name: Build Frontend Page
 on:
   push:
     branches: [ frontend ]
-  pull_request:
-    branches: [ frontend ]
   workflow_dispatch:
 
 jobs:
