@@ -7,7 +7,8 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "图标素材",
+    "RMVX脚本"
   ],
   "url": "http://www.akunou.com/",
   "url3": "http://www.akunou.com/material/rgss2/index.html",
@@ -27,5 +28,11 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://www.akunou.com/"
+  "url2": "http://www.akunou.com/",
+  "category2": [
+    [
+      "图片素材",
+      "图片素材"
+    ]
+  ]
 }

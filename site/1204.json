@@ -7,7 +7,12 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "RMXP脚本",
+    "RMVX脚本",
+    "RMVA脚本",
+    "脸图素材",
+    "行走图素材",
+    "动画素材"
   ],
   "url": "https://www.lemon-slice.net/",
   "url3": "https://www.lemon-slice.net/material.html",
@@ -27,5 +32,15 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "https://www.lemon-slice.net/material.html"
+  "url2": "https://www.lemon-slice.net/material.html",
+  "category2": [
+    [
+      "图片素材",
+      "GameOver图"
+    ],
+    [
+      "图片素材",
+      "转场图"
+    ]
+  ]
 }

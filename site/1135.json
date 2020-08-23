@@ -7,7 +7,9 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "脸图素材",
+    "行走图素材",
+    "脸图素材"
   ],
   "url": "http://tkool.kagati.com/",
   "url3": "http://tkool.kagati.com/kiyaku",
@@ -27,5 +29,19 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://tkool.kagati.com/"
+  "url2": "http://tkool.kagati.com/",
+  "category2": [
+    [
+      "图片素材",
+      "半身立绘生成器"
+    ],
+    [
+      "图片素材",
+      "行走图生成器"
+    ],
+    [
+      "图片素材",
+      "VA脸图生成器素材"
+    ]
+  ]
 }

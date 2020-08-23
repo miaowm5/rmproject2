@@ -7,7 +7,10 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "地图图块素材",
+    "图标素材",
+    "行走图素材",
+    "脸图素材"
   ],
   "url": "http://vitamindog.blog68.fc2.com/",
   "url3": "http://vitamindog.blog68.fc2.com/",
@@ -27,5 +30,11 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://vitamindog.blog68.fc2.com/"
+  "url2": "http://vitamindog.blog68.fc2.com/",
+  "category2": [
+    [
+      "图片素材",
+      "其他图片素材"
+    ]
+  ]
 }

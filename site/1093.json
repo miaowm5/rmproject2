@@ -7,7 +7,11 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "脸图素材",
+    "行走图素材",
+    "地图图块素材",
+    "动画素材",
+    "场景素材"
   ],
   "url": "http://ameblo.jp/nomicom",
   "url3": "http://ameblo.jp/nomicom/entry-10165348816.html",
@@ -27,5 +31,11 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://ameblo.jp/nomicom"
+  "url2": "http://ameblo.jp/nomicom",
+  "category2": [
+    [
+      "图片素材",
+      "雾图像素材"
+    ]
+  ]
 }

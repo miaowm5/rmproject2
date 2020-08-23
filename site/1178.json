@@ -7,7 +7,7 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "音效素材"
   ],
   "url": "http://www.whiteflute.org/",
   "url3": "http://www.whiteflute.org/wfrgss/?mode=view&realmId=1&pageId=5",
@@ -27,5 +27,11 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://www.whiteflute.org/wfrgss/?mode=view&realmId=1&pageId=6"
+  "url2": "http://www.whiteflute.org/wfrgss/?mode=view&realmId=1&pageId=6",
+  "category2": [
+    [
+      "图片素材",
+      "脚本素材"
+    ]
+  ]
 }

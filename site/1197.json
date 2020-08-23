@@ -7,7 +7,7 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "图标素材"
   ],
   "url": "http://neko.moo.jp/BS/",
   "url3": "http://neko.moo.jp/BS/",
@@ -27,5 +27,15 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://neko.moo.jp/BS/"
+  "url2": "http://neko.moo.jp/BS/",
+  "category2": [
+    [
+      "图片素材",
+      "RM2K敌人素材"
+    ],
+    [
+      "图片素材",
+      "像素图素材"
+    ]
+  ]
 }

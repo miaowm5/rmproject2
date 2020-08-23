@@ -7,7 +7,7 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "地图图块素材"
   ],
   "url": "http://obsblackinblue.lofter.com/",
   "url3": "http://obsblackinblue.lofter.com/0-1-1",
@@ -27,5 +27,11 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://obsblackinblue.lofter.com/"
+  "url2": "http://obsblackinblue.lofter.com/",
+  "category2": [
+    [
+      "图片素材",
+      "FSM风行走图"
+    ]
+  ]
 }

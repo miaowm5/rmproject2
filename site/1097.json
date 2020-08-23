@@ -7,7 +7,10 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "行走图素材",
+    "地图图块素材",
+    "场景素材",
+    "RMVX脚本"
   ],
   "url": "http://mjtkool.jugem.jp/",
   "url3": "http://mjtkool.jugem.jp/?eid=2#sequel",
@@ -27,5 +30,15 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://mjtkool.jugem.jp/"
+  "url2": "http://mjtkool.jugem.jp/",
+  "category2": [
+    [
+      "图片素材",
+      "菜单背景"
+    ],
+    [
+      "图片素材",
+      "花纹"
+    ]
+  ]
 }

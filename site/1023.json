@@ -7,7 +7,10 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "脸图素材",
+    "行走图素材",
+    "图标素材",
+    "场景素材"
   ],
   "url": "http://momomohouse.jugem.jp/",
   "url3": "http://momomohouse.jugem.jp/?eid=23",
@@ -27,5 +30,11 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://momomohouse.moo.jp/"
+  "url2": "http://momomohouse.moo.jp/",
+  "category2": [
+    [
+      "图片素材",
+      "RM2000窗口素材"
+    ]
+  ]
 }

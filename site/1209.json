@@ -7,7 +7,8 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "音效素材",
+    "脸图素材"
   ],
   "url": "http://www.vita-chi.net/",
   "url3": "http://www.vita-chi.net/sozai1.htm",
@@ -27,5 +28,15 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://www.vita-chi.net/sozai1.htm"
+  "url2": "http://www.vita-chi.net/sozai1.htm",
+  "category2": [
+    [
+      "图片素材",
+      "窗口背景素材"
+    ],
+    [
+      "图片素材",
+      "CG图片素材"
+    ]
+  ]
 }

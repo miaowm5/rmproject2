@@ -7,7 +7,11 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "脸图素材",
+    "战斗图素材",
+    "行走图素材",
+    "场景素材",
+    "RMXP脚本"
   ],
   "url": "http://etolier.webcrow.jp/index.html",
   "url3": "http://etolier.webcrow.jp/sozai.html",
@@ -27,5 +31,23 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://etolier.webcrow.jp/sozai.html"
+  "url2": "http://etolier.webcrow.jp/sozai.html",
+  "category2": [
+    [
+      "图片素材",
+      "窗口"
+    ],
+    [
+      "图片素材",
+      "转场图"
+    ],
+    [
+      "图片素材",
+      "游戏结束图"
+    ],
+    [
+      "图片素材",
+      "雾图"
+    ]
+  ]
 }

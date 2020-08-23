@@ -7,7 +7,8 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "脸图素材",
+    "行走图素材"
   ],
   "url": "http://konoee.blog137.fc2.com/",
   "url3": "http://konoee.blog137.fc2.com/blog-entry-1.html",
@@ -27,5 +28,11 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://konoee.blog137.fc2.com/"
+  "url2": "http://konoee.blog137.fc2.com/",
+  "category2": [
+    [
+      "图片素材",
+      "地图素材"
+    ]
+  ]
 }

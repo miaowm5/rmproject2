@@ -7,7 +7,7 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "音乐素材"
   ],
   "url": "https://soundeffect-lab.info/",
   "url3": "https://soundeffect-lab.info/agreement/",
@@ -26,5 +26,11 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "category2": [
+    [
+      "图片素材",
+      "范例地图"
+    ]
+  ]
 }

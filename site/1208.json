@@ -6,9 +6,7 @@
     "日语"
   ],
   "gfw": false,
-  "category": [
-    "音效"
-  ],
+  "category": [],
   "url": "http://material.stksa.net/",
   "url3": "http://material.stksa.net/material.html",
   "urlReg": ".*soundeffect-lab.*",
@@ -27,5 +25,11 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://material.stksa.net/voice/"
+  "url2": "http://material.stksa.net/voice/",
+  "category2": [
+    [
+      "图片素材",
+      "语音素材"
+    ]
+  ]
 }

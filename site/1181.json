@@ -7,7 +7,7 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "场景素材"
   ],
   "url": "http://snao.sakura.ne.jp/",
   "url3": "http://snao.sakura.ne.jp/sozai.htm",
@@ -27,5 +27,15 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://snao.sakura.ne.jp/sozai.htm"
+  "url2": "http://snao.sakura.ne.jp/sozai.htm",
+  "category2": [
+    [
+      "图片素材",
+      "插图背景"
+    ],
+    [
+      "图片素材",
+      "幻想风格CG"
+    ]
+  ]
 }

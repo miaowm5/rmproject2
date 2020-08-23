@@ -7,7 +7,7 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "脸图素材"
   ],
   "url": "http://www.jewel-s.jp/",
   "url3": "http://www.jewel-s.jp/download/",
@@ -27,5 +27,15 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://www.jewel-s.jp/download/"
+  "url2": "http://www.jewel-s.jp/download/",
+  "category2": [
+    [
+      "图片素材",
+      "剧本素材"
+    ],
+    [
+      "图片素材",
+      "卡片图案素材"
+    ]
+  ]
 }

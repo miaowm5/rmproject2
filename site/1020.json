@@ -6,9 +6,7 @@
     "日语"
   ],
   "gfw": false,
-  "category": [
-    "音效"
-  ],
+  "category": [],
   "url": "https://soundeffect-lab.info/",
   "url3": "https://soundeffect-lab.info/agreement/",
   "urlReg": ".*soundeffect-lab.*",
@@ -26,5 +24,11 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "category2": [
+    [
+      "图片素材",
+      "天空背景素材"
+    ]
+  ]
 }

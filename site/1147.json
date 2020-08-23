@@ -7,7 +7,12 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "RMVX脚本",
+    "RMVA脚本",
+    "地图图块素材",
+    "行走图素材",
+    "战斗图素材",
+    "图标素材"
   ],
   "url": "http://cacaosoft.webcrow.jp/",
   "url3": "http://cacaosoft.webcrow.jp/rule.html",
@@ -27,5 +32,15 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://cacaosoft.webcrow.jp/"
+  "url2": "http://cacaosoft.webcrow.jp/",
+  "category2": [
+    [
+      "图片素材",
+      "窗口素材"
+    ],
+    [
+      "图片素材",
+      "转场素材"
+    ]
+  ]
 }

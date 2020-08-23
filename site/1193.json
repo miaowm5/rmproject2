@@ -6,9 +6,7 @@
     "日语"
   ],
   "gfw": false,
-  "category": [
-    "音效"
-  ],
+  "category": [],
   "url": "http://free-texture.net/",
   "url3": "http://free-texture.net/about",
   "urlReg": ".*soundeffect-lab.*",
@@ -27,5 +25,11 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "http://free-texture.net/"
+  "url2": "http://free-texture.net/",
+  "category2": [
+    [
+      "图片素材",
+      "高清纹理素材"
+    ]
+  ]
 }

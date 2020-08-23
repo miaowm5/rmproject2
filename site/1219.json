@@ -7,7 +7,12 @@
   ],
   "gfw": false,
   "category": [
-    "音效"
+    "脸图素材",
+    "行走图素材",
+    "脸图素材",
+    "地图图块素材",
+    "动画素材",
+    "图标素材"
   ],
   "url": "https://usui.moo.jp/frame2.html",
   "url3": "https://usui.moo.jp/rpg_kitei.html",
@@ -27,5 +32,11 @@
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
   "comment": [],
-  "url2": "https://usui.moo.jp/rpg_tukuru.html"
+  "url2": "https://usui.moo.jp/rpg_tukuru.html",
+  "category2": [
+    [
+      "图片素材",
+      "窗口"
+    ]
+  ]
 }
