@@ -1,7 +1,7 @@
 {
   "name": "みんとのお部屋",
   "logo": "1.gif",
-  "owner": "",
+  "owner": "みんと",
   "language": [
     "日语"
   ],
@@ -9,8 +9,8 @@
   "category": [
     "音效"
   ],
-  "url": "https://soundeffect-lab.info/",
-  "url3": "https://soundeffect-lab.info/agreement/",
+  "url": "http://mintoroom.saloon.jp/",
+  "url3": "mintoroom.saloon.jp/Q_A.html",
   "urlReg": ".*soundeffect-lab.*",
   "rule": [
     101
@@ -26,5 +26,6 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "url2": "http://mintoroom.saloon.jp/Special.html"
 }
