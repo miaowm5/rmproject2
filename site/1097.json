@@ -1,7 +1,7 @@
 {
   "name": "MJのツクール成長日記",
   "logo": "1.gif",
-  "owner": "",
+  "owner": "MJ",
   "language": [
     "日语"
   ],
@@ -9,8 +9,8 @@
   "category": [
     "音效"
   ],
-  "url": "https://soundeffect-lab.info/",
-  "url3": "https://soundeffect-lab.info/agreement/",
+  "url": "http://mjtkool.jugem.jp/",
+  "url3": "http://mjtkool.jugem.jp/?eid=2#sequel",
   "urlReg": ".*soundeffect-lab.*",
   "rule": [
     101
@@ -26,5 +26,6 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "url2": "http://mjtkool.jugem.jp/"
 }
