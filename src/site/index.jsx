@@ -6,6 +6,7 @@ import Edit from './edit'
 import styles from './index.module.css'
 
 const Main = ({ data })=><div>
+  {data.close && <p>【本素材站已关站或迁移到了其他地址，若有关于本站的新地址请报告给我们】</p>}
   {data.logo && <div><img src={`./media/site/${data.logo}`} alt="logo" /></div>}
   <p>站点名称：{data.name}</p>
   <p>站长：{data.owner}</p>
