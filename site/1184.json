@@ -1,7 +1,7 @@
 {
   "name": "ぽてちん",
   "logo": "1.gif",
-  "owner": "",
+  "owner": "キリタ",
   "language": [
     "日语"
   ],
@@ -9,8 +9,8 @@
   "category": [
     "音效"
   ],
-  "url": "https://soundeffect-lab.info/",
-  "url3": "https://soundeffect-lab.info/agreement/",
+  "url": "http://potetinx.blog.fc2.com/",
+  "url3": "http://potetinx.blog.fc2.com/blog-entry-1.html",
   "urlReg": ".*soundeffect-lab.*",
   "rule": [
     101
@@ -26,5 +26,6 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "url2": "http://potetinx.blog.fc2.com/"
 }
