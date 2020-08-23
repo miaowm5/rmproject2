@@ -1,5 +1,6 @@
 {
-  "name": "（已关闭）未完のダンボール",
+  "name": "未完のダンボール",
+  "close": true,
   "logo": "1.gif",
   "owner": "",
   "language": [
