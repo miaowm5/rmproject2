@@ -1,7 +1,7 @@
 {
   "name": "Artificial Providence",
   "logo": "1.gif",
-  "owner": "",
+  "owner": "星潟",
   "language": [
     "日语"
   ],
@@ -9,8 +9,8 @@
   "category": [
     "音效"
   ],
-  "url": "https://soundeffect-lab.info/",
-  "url3": "https://soundeffect-lab.info/agreement/",
+  "url": "http://artificialprovidence.web.fc2.com/index.html",
+  "url3": "http://artificialprovidence.web.fc2.com/index.html",
   "urlReg": ".*soundeffect-lab.*",
   "rule": [
     101
@@ -26,5 +26,6 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "url2": "http://artificialprovidence.web.fc2.com/index.html"
 }
