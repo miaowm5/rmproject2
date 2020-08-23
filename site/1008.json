@@ -1,7 +1,7 @@
 {
   "name": "蒼月音",
   "logo": "1.gif",
-  "owner": "",
+  "owner": "ベンズ",
   "language": [
     "日语"
   ],
@@ -9,8 +9,8 @@
   "category": [
     "音效"
   ],
-  "url": "https://soundeffect-lab.info/",
-  "url3": "https://soundeffect-lab.info/agreement/",
+  "url": "http://www.sougetsu-on.net/",
+  "url3": "http://www.sougetsu-on.net/agreement",
   "urlReg": ".*soundeffect-lab.*",
   "rule": [
     101
@@ -26,5 +26,6 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "url2": "http://www.sougetsu-on.net/bgm"
 }
