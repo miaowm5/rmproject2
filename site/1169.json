@@ -1,7 +1,7 @@
 {
   "name": "ボクとあたち帝国",
   "logo": "1.gif",
-  "owner": "",
+  "owner": "瑞貴りょう",
   "language": [
     "日语"
   ],
@@ -9,8 +9,8 @@
   "category": [
     "音效"
   ],
-  "url": "https://soundeffect-lab.info/",
-  "url3": "https://soundeffect-lab.info/agreement/",
+  "url": "http://lucifer.raindrop.jp/Empire/index.htm.ja",
+  "url3": "http://lucifer.raindrop.jp/Empire/terms.htm",
   "urlReg": ".*soundeffect-lab.*",
   "rule": [
     101
@@ -26,5 +26,6 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "url2": "http://lucifer.raindrop.jp/Empire/tkool.htm"
 }
