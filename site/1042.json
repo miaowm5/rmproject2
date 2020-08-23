@@ -1,7 +1,7 @@
 {
   "name": "小麦畑",
   "logo": "1.gif",
-  "owner": "",
+  "owner": "oumi、羅伊紀",
   "language": [
     "日语"
   ],
@@ -9,8 +9,8 @@
   "category": [
     "音效"
   ],
-  "url": "https://soundeffect-lab.info/",
-  "url3": "https://soundeffect-lab.info/agreement/",
+  "url": "http://wheat.x0.to/",
+  "url3": "http://wheat.x0.to/game/photo/",
   "urlReg": ".*soundeffect-lab.*",
   "rule": [
     101
@@ -26,5 +26,6 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "url2": "http://wheat.x0.to/game/photo/"
 }
