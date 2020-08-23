@@ -1,7 +1,7 @@
 {
   "name": "煉獄庭園",
   "logo": "1.gif",
-  "owner": "",
+  "owner": "煉獄小僧等（https://www.rengoku-teien.com/about/index.html）",
   "language": [
     "日语"
   ],
@@ -9,8 +9,8 @@
   "category": [
     "音效"
   ],
-  "url": "https://soundeffect-lab.info/",
-  "url3": "https://soundeffect-lab.info/agreement/",
+  "url": "https://www.rengoku-teien.com/",
+  "url3": "https://www.rengoku-teien.com/rule/index.html",
   "urlReg": ".*soundeffect-lab.*",
   "rule": [
     101
@@ -26,5 +26,6 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "url2": "https://www.rengoku-teien.com/"
 }
