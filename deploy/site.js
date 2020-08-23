@@ -52,6 +52,7 @@ module.exports = async (mainPath, ruleData)=>{
       id,
       name: config.name,
       category: config.category,
+      category2: config.category2,
       close: Boolean(config.close),
     })
     taskList.push(fse.writeFile(path.join(siteTargetPath, `${id}.json`), JSON.stringify(config)))
