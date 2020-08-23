@@ -15,7 +15,7 @@ const Main = ({ data })=><div>
   <p>墙？：{data.gfw ? '有' : '无'}</p>
   <p>素材内容：
     {data.category.join('、')}
-    {data.category2.length > 0 && data.category2.map((cat)=>cat[1]).join('、')}
+    {data.category2 && data.category2.length > 0 && data.category2.map((cat)=>cat[1]).join('、')}
   </p>
   <p>素材地址：<a href={data.url2} target="_blank" rel="noopener noreferrer">{data.url2}</a></p>
   <p>素材利用规约：</p>
