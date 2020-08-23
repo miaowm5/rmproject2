@@ -1,7 +1,7 @@
 {
   "name": "そういうんじゃないから",
   "logo": "1.gif",
-  "owner": "",
+  "owner": "janai21（janai21@mail.goo.ne.jp）",
   "language": [
     "日语"
   ],
@@ -9,8 +9,8 @@
   "category": [
     "音效"
   ],
-  "url": "https://soundeffect-lab.info/",
-  "url3": "https://soundeffect-lab.info/agreement/",
+  "url": "http://sorejanai.blog.shinobi.jp/",
+  "url3": "http://sorejanai.blog.shinobi.jp/%E5%88%A9%E7%94%A8%E8%A6%8F%E7%A8%8B/%E5%88%A9%E7%94%A8%E8%A6%8F%E7%A8%8B",
   "urlReg": ".*soundeffect-lab.*",
   "rule": [
     101
@@ -26,5 +26,6 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "url2": "http://sorejanai.blog.shinobi.jp/"
 }
