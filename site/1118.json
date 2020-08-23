@@ -1,7 +1,7 @@
 {
   "name": "沼から現れた",
   "logo": "1.gif",
-  "owner": "",
+  "owner": "地獄カバ",
   "language": [
     "日语"
   ],
@@ -9,8 +9,8 @@
   "category": [
     "音效"
   ],
-  "url": "https://soundeffect-lab.info/",
-  "url3": "https://soundeffect-lab.info/agreement/",
+  "url": "http://kb147.web.fc2.com/",
+  "url3": "http://kb147.web.fc2.com/kiyaku.html",
   "urlReg": ".*soundeffect-lab.*",
   "rule": [
     101
@@ -26,5 +26,6 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "url2": "http://kb147.web.fc2.com/sozai.html"
 }
