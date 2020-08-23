@@ -1,7 +1,7 @@
 {
   "name": "かるがも行進局",
   "logo": "1.gif",
-  "owner": "",
+  "owner": "karu6615",
   "language": [
     "日语"
   ],
@@ -9,8 +9,8 @@
   "category": [
     "音效"
   ],
-  "url": "https://soundeffect-lab.info/",
-  "url3": "https://soundeffect-lab.info/agreement/",
+  "url": "https://sites.google.com/site/karu6615/home",
+  "url3": "https://sites.google.com/site/karu6615/qa",
   "urlReg": ".*soundeffect-lab.*",
   "rule": [
     101
@@ -26,5 +26,6 @@
   ],
   "author": "喵呜喵5",
   "updateTime": "2020.8.17",
-  "comment": []
+  "comment": [],
+  "url2": "https://sites.google.com/site/karu6615/free_sozai"
 }
