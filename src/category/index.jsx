@@ -34,7 +34,7 @@ const Category = ({ category, list, select })=>{
 
 const useData = ()=>{
   const site = useAPI('./api/site.json')
-  const category = useAPI('./api/page/rule.json')
+  const category = useAPI('./api/page/category.json')
   if (site.state === 'fail'){
     return { state: 'fail', type: 'site', result: site.result }
   }
