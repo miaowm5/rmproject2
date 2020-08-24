@@ -7,6 +7,54 @@ const Input = ({ title, value, onChange })=><div>
   <input className={styles.input} type="text" value={value || ''} onChange={(e)=>onChange(e.target.value)} />
 </div>
 
+const ListInput = ({ title, value, placeholder, onChange }) => {
+  const items = (typeof value === 'string'
+    ? value.split(/[,，]/)
+    : (value || []))
+    .filter((id) => id);
+  const [list, setList] = useState(items)
+
+  const addItem = (event) => {
+    const text = event.target.value.replace(/[,，]/, '')
+    if (text !== '') {
+      setList((oldList) => {
+        const newList = [...oldList, text]
+        onChange(newList)
+        return newList
+      })
+    }
+    event.target.value = ''
+  }
+
+  const removeItem = (index) => {
+    setList((oldList) => {
+      const newList = [...oldList.filter((_, i) => i !== index)]
+      onChange(newList)
+      return newList
+    })
+  }
+
+  const onKeyUp = (event) => {
+    if (event.key.match(/Enter|[,，]/)) {
+      addItem(event)
+    }
+  }
+
+  return <div>
+    <div className={styles.inputTitle}>{title}</div>
+    <div className={`${styles.input} ${styles.inputList}`}>
+      {list.map((item, index) => <>
+        <span
+          key={index}
+          className={styles.inputListItem}
+          onClick={() => removeItem(index)}
+        >{item}</span>
+      </>)}
+      <input type="text" onKeyUp={onKeyUp} placeholder={placeholder} />
+    </div>
+  </div>
+}
+
 const Main = ({ closeEdit, data: originData })=>{
   const [edit, setEdit] = useState(true)
   const [data, setData] = useState(()=>{
@@ -27,6 +75,7 @@ const Main = ({ closeEdit, data: originData })=>{
       <Input title="站点地址" value={data.url} onChange={(v)=>update('url', v)} />
       <Input title="素材地址" value={data.url2} onChange={(v)=>update('url2', v)} />
       <Input title="规约原文" value={data.url3} onChange={(v)=>update('url3', v)} />
+      <ListInput title="语言" value={data.language} placeholder="输入逗号或回车以确认" onChange={(v)=>update('language', v)} />
       <br />
       <br />
       <div className={styles.button} onClick={()=>setEdit(false)}>提交修改</div>
