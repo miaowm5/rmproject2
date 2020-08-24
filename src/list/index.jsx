@@ -20,7 +20,7 @@ const Site = ({ site })=>{
     category = category.concat(cate2)
   }
   return <div className={styles.item}>
-    <a href={`#!site/${site.id}`} className={styles.title}>
+    <a href={`#!site/${site.id}`} className={styles.title} target="_blank" rel="noopener noreferrer">
       {site.close && '【已关站】'}
       {site.name}
     </a>
