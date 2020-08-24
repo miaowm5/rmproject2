@@ -46,6 +46,25 @@
 .inputList > input:focus {
   outline: transparent;
 }
+.inputCheckbox {
+  display: inline-block;
+  margin-right: .7em;
+}
+.inputCheckbox input {
+  display: none;
+}
+.inputCheckbox span {
+  margin: 0;
+  padding: 1em .7em .7em;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid #555;
+  transition: border-bottom 0.5s;
+}
+.inputCheckbox input:checked ~ span {
+  color: white;
+  border-bottom: 1px solid lightskyblue;
+}
 .resultText{
   display: inline-block;
   width: 100%;

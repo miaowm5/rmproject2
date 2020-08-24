@@ -55,6 +55,14 @@ const ListInput = ({ title, value, placeholder, onChange }) => {
   </div>
 }
 
+const CheckboxInput = ({ title, value, onChange }) => {
+  // eslint-disable-next-line jsx-a11y/label-has-associated-control
+  return <label className={`${styles.inputTitle} ${styles.inputCheckbox}`}>
+    <input type="checkbox" checked={value} onChange={(e) => onChange(e.target.checked)} />
+    <span>{title}</span>
+  </label>
+}
+
 const Main = ({ closeEdit, data: originData })=>{
   const [edit, setEdit] = useState(true)
   const [data, setData] = useState(()=>{
@@ -75,7 +83,10 @@ const Main = ({ closeEdit, data: originData })=>{
       <Input title="站点地址" value={data.url} onChange={(v)=>update('url', v)} />
       <Input title="素材地址" value={data.url2} onChange={(v)=>update('url2', v)} />
       <Input title="规约原文" value={data.url3} onChange={(v)=>update('url3', v)} />
-      <ListInput title="语言" value={data.language} placeholder="输入逗号或回车以确认" onChange={(v)=>update('language', v)} />
+      <ListInput title="语言" value={data.language} onChange={(v)=>update('language', v)} placeholder="输入逗号或回车以确认" />
+      <ListInput title="站点分类" value={data.category} onChange={(v)=>update('category', v)} placeholder="输入逗号或回车以确认" />
+      <CheckboxInput title="是否被墙？" value={data.gfw} onChange={(v)=>update('gfw', v)} />
+      <CheckboxInput title="是否关站？" value={data.close} onChange={(v)=>update('close', v)} />
       <br />
       <br />
       <div className={styles.button} onClick={()=>setEdit(false)}>提交修改</div>
