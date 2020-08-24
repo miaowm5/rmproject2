@@ -55,13 +55,11 @@ const ListInput = ({ title, value, placeholder, onChange }) => {
   </div>
 }
 
-const CheckboxInput = ({ title, value, onChange }) => {
-  // eslint-disable-next-line jsx-a11y/label-has-associated-control
-  return <label className={`${styles.inputTitle} ${styles.inputCheckbox}`}>
-    <input type="checkbox" checked={value} onChange={(e) => onChange(e.target.checked)} />
-    <span>{title}</span>
-  </label>
-}
+// eslint-disable-next-line jsx-a11y/label-has-associated-control
+const CheckboxInput = ({ title, value, onChange }) => <label className={`${styles.inputTitle} ${styles.inputCheckbox}`}>
+  <input type="checkbox" checked={value} onChange={(e) => onChange(e.target.checked)} />
+  <span>{title}</span>
+</label>
 
 const Main = ({ closeEdit, data: originData })=>{
   const [edit, setEdit] = useState(true)
