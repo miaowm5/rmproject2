@@ -12,7 +12,7 @@ const main = async ()=>{
   const ruleData = await getRuleData(mainPath)
   await handleRule(mainPath, ruleData)
   await handleSite(mainPath, ruleData)
-  fse.copy(path.join(mainPath, 'page'), path.join(mainPath, 'build/page'))
+  fse.copy(path.join(mainPath, 'page'), path.join(mainPath, 'build/api/page'))
 }
 
 main().catch((e)=>{ console.error(e) })
