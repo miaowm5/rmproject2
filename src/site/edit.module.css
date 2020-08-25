@@ -32,6 +32,8 @@
   padding: .3em;
   color: white;
   background: #333;
+  cursor: pointer;
+  user-select: none;
 }
 .inputList > input {
   flex: 1;
@@ -45,6 +47,9 @@
 }
 .inputList > input:focus {
   outline: transparent;
+}
+.inputListItemRecommend {
+  background-color: #999;
 }
 .inputCheckbox {
   display: inline-block;

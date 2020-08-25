@@ -1,5 +1,6 @@
 
 import React, { useState, useCallback } from 'react'
+import { useAPI } from '../common'
 import styles from './edit.module.css'
 
 const Input = ({ title, value, onChange })=><div>
@@ -7,51 +8,63 @@ const Input = ({ title, value, onChange })=><div>
   <input className={styles.input} type="text" value={value || ''} onChange={(e)=>onChange(e.target.value)} />
 </div>
 
-const ListInput = ({ title, value, placeholder, onChange }) => {
+const ListInput = ({
+  title,
+  value,
+  onChange,
+  placeholder = '输入逗号或回车以确认',
+  recommands = [],
+  allowCustom = true,
+  delimiter = /[,，]/,
+}) => {
   const items = (typeof value === 'string'
-    ? value.split(/[,，]/)
+    ? value.split(delimiter)
     : (value || []))
-    .filter((id) => id);
+    .filter((id) => id)
+    .filter((item, index, self) => self.indexOf(item) === index)
   const [list, setList] = useState(items)
 
-  const addItem = (event) => {
-    const text = event.target.value.replace(/[,，]/, '')
-    if (text !== '') {
-      setList((oldList) => {
-        const newList = [...oldList, text]
-        onChange(newList)
-        return newList
-      })
-    }
-    event.target.value = ''
+  const addItem = (text) => {
+    const newItems = text.split(delimiter)
+      .filter((item) => item !== '' && list.indexOf(item) < 0)
+    const newList = [...list, ...newItems]
+    onChange(newList)
+    setList(newList)
   }
 
   const removeItem = (index) => {
-    setList((oldList) => {
-      const newList = [...oldList.filter((_, i) => i !== index)]
-      onChange(newList)
-      return newList
-    })
+    const newList = [...list.filter((_, i) => i !== index)]
+    setList(newList)
+    onChange(newList)
   }
 
-  const onKeyUp = (event) => {
-    if (event.key.match(/Enter|[,，]/)) {
-      addItem(event)
+  const handleInput = (event) => {
+    if (event.key === 'Enter' || event.target.value.match(delimiter)) {
+      addItem(event.target.value)
+      event.target.value = ''
     }
   }
 
   return <div>
     <div className={styles.inputTitle}>{title}</div>
     <div className={`${styles.input} ${styles.inputList}`}>
-      {list.map((item, index) => <>
-        <span
-          key={index}
-          className={styles.inputListItem}
-          onClick={() => removeItem(index)}
-        >{item}</span>
-      </>)}
-      <input type="text" onKeyUp={onKeyUp} placeholder={placeholder} />
+      {list.map((item, index) => <span
+        key={`item-${index}`}
+        className={styles.inputListItem}
+        onClick={() => removeItem(index)}
+      >{item}</span>)}
+      {allowCustom
+        && <input type="text" onKeyUp={handleInput} placeholder={placeholder} />}
     </div>
+    {recommands.length > 0 && <div>
+      {recommands
+        .filter((item) => list.indexOf(item) < 0)
+        .map((item, index) => <span
+          key={`recommend-${index}`}
+          className={`${styles.inputListItem} ${styles.inputListItemRecommend}`}
+          onClick={() => addItem(item)}
+        >{item}</span>)}
+    </div>}
   </div>
 }
 
@@ -74,6 +87,10 @@ const Main = ({ closeEdit, data: originData })=>{
       return { ...oldData, ...changeValue }
     })
   }, [])
+  const category = useAPI('./api/page/category.json')
+  const categories = category.state !== 'success'
+    ? []
+    : category.result.map(({ child }) => (child || []).map(([name]) => name)).flat()
   return <>
     <div className={styles.button} onClick={closeEdit}>放弃编辑</div>
     {edit && <>
@@ -81,8 +98,18 @@ const Main = ({ closeEdit, data: originData })=>{
       <Input title="站点地址" value={data.url} onChange={(v)=>update('url', v)} />
       <Input title="素材地址" value={data.url2} onChange={(v)=>update('url2', v)} />
       <Input title="规约原文" value={data.url3} onChange={(v)=>update('url3', v)} />
-      <ListInput title="语言" value={data.language} onChange={(v)=>update('language', v)} placeholder="输入逗号或回车以确认" />
-      <ListInput title="站点分类" value={data.category} onChange={(v)=>update('category', v)} placeholder="输入逗号或回车以确认" />
+      <ListInput
+        title="语言"
+        value={data.language}
+        onChange={(v)=>update('language', v)}
+      />
+      <ListInput
+        title="站点分类"
+        value={data.category}
+        onChange={(v)=>update('category', v)}
+        recommands={categories}
+        allowCustom={false}
+      />
       <CheckboxInput title="是否被墙？" value={data.gfw} onChange={(v)=>update('gfw', v)} />
       <CheckboxInput title="是否关站？" value={data.close} onChange={(v)=>update('close', v)} />
       <br />
