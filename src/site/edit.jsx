@@ -45,6 +45,11 @@ const ListInput = ({
     }
   }
 
+  const handleBlur = (event) => {
+    if (event.target.value){ addItem(event.target.value) }
+    event.target.value = ''
+  }
+
   return <div>
     <div className={styles.inputTitle}>{title}</div>
     <div className={`${styles.input} ${styles.inputList}`}>
@@ -54,7 +59,7 @@ const ListInput = ({
         onClick={() => removeItem(index)}
       >{item}</span>)}
       {allowCustom
-        && <input type="text" onKeyUp={handleInput} placeholder={placeholder} />}
+        && <input type="text" onKeyUp={handleInput} onBlur={handleBlur} placeholder={placeholder} />}
     </div>
     {recommands.length > 0 && <div>
       {recommands
@@ -74,6 +79,20 @@ const CheckboxInput = ({ title, value, onChange }) => <label className={`${style
   <span>{title}</span>
 </label>
 
+const CategoryInput = ({ value, onChange })=>{
+  const { result, state } = useAPI('./api/page/category.json')
+  const categories = state === 'success'
+    ? result.map(({ child }) => (child || []).map(([name]) => name)).flat()
+    : []
+  return <ListInput
+    title="站点分类"
+    value={value}
+    onChange={onChange}
+    recommands={categories}
+    allowCustom={false}
+  />
+}
+
 const Main = ({ closeEdit, data: originData })=>{
   const [edit, setEdit] = useState(true)
   const [data, setData] = useState(()=>{
@@ -87,10 +106,6 @@ const Main = ({ closeEdit, data: originData })=>{
       return { ...oldData, ...changeValue }
     })
   }, [])
-  const category = useAPI('./api/page/category.json')
-  const categories = category.state !== 'success'
-    ? []
-    : category.result.map(({ child }) => (child || []).map(([name]) => name)).flat()
   return <>
     <div className={styles.button} onClick={closeEdit}>放弃编辑</div>
     {edit && <>
@@ -103,13 +118,7 @@ const Main = ({ closeEdit, data: originData })=>{
         value={data.language}
         onChange={(v)=>update('language', v)}
       />
-      <ListInput
-        title="站点分类"
-        value={data.category}
-        onChange={(v)=>update('category', v)}
-        recommands={categories}
-        allowCustom={false}
-      />
+      <CategoryInput value={data.category} onChange={(v)=>update('category', v)} />
       <CheckboxInput title="是否被墙？" value={data.gfw} onChange={(v)=>update('gfw', v)} />
       <CheckboxInput title="是否关站？" value={data.close} onChange={(v)=>update('close', v)} />
       <br />

@@ -23,6 +23,7 @@
   display: flex;
   margin: 0;
   padding: 0;
+  min-height: 3em;
 }
 .inputListItem {
   display: inline-block;
