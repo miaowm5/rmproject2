@@ -45,6 +45,11 @@ const ListInput = ({
     }
   }
 
+  const handleBlur = (event) => {
+    if (event.target.value){ addItem(event.target.value) }
+    event.target.value = ''
+  }
+
   return <div>
     <div className={styles.inputTitle}>{title}</div>
     <div className={`${styles.input} ${styles.inputList}`}>
@@ -54,7 +59,7 @@ const ListInput = ({
         onClick={() => removeItem(index)}
       >{item}</span>)}
       {allowCustom
-        && <input type="text" onKeyUp={handleInput} placeholder={placeholder} />}
+        && <input type="text" onKeyUp={handleInput} onBlur={handleBlur} placeholder={placeholder} />}
     </div>
     {recommands.length > 0 && <div>
       {recommands
