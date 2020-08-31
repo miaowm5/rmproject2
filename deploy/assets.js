@@ -65,6 +65,7 @@ const main = async ()=>{
       await Promise.all(update)
       fse.copy(path.join(mainPath, 'assets.json'), path.join(mainPath, './build/assets/assets.json'))
     }catch(e){
+      console.error(e)
       fse.remove(path.join(mainPath, './build/assets'))
     }
   }else{
