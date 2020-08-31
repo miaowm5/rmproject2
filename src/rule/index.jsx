@@ -8,7 +8,7 @@ const Rule = ({ rule })=>{
   if (!rule){ return null }
   return <div>
     <h3>{rule.name}</h3>
-    <img src={`./media/rule/${rule.image}.jpg`} alt={rule.name} />
+    <img src={`./assets/rule/${rule.image}.jpg`} alt={rule.name} />
     <div><Detail content={rule.detailParse} /></div>
   </div>
 }

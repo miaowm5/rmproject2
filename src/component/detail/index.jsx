@@ -16,7 +16,7 @@ const List = ({ param })=><ul>
 </ul>
 
 const RuleImage = ({ param })=><p><a href={`#!rule/${param[0]}`}>
-  <img alt={param[1]} src={`./media/rule/${param[2]}.jpg`} />
+  <img alt={param[1]} src={`./assets/rule/${param[2]}.jpg`} />
 </a></p>
 
 const Main = ({ content })=>{
