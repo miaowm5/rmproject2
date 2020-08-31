@@ -2,6 +2,7 @@
 const fse = require('fs-extra')
 const path = require('path')
 const http = require('http')
+const https = require('https')
 const fs = require('fs')
 
 const mainPath = path.join(__dirname, '../')
@@ -12,7 +13,8 @@ const download = async (url, filename)=>{
   await fse.ensureDir(path.dirname(dest))
   const file = fs.createWriteStream(dest)
   await new Promise((success, fail)=>{
-    http.get(url, (response)=>{
+    const proto = url.startsWith('https:') ? https : http
+    proto.get(url, (response)=>{
       response.pipe(file)
       file.on('finish', ()=>{ file.close(success) })
     }).on('error', (err)=>{
@@ -59,8 +61,12 @@ const main = async ()=>{
     }
   })
   if (update.length > 0){
-    await Promise.all(update)
-    fse.copy(path.join(mainPath, 'assets.json'), path.join(mainPath, './build/assets/assets.json'))
+    try{
+      await Promise.all(update)
+      fse.copy(path.join(mainPath, 'assets.json'), path.join(mainPath, './build/assets/assets.json'))
+    }catch(e){
+      fse.remove(path.join(mainPath, './build/assets'))
+    }
   }else{
     fse.remove(path.join(mainPath, './build/assets'))
   }
