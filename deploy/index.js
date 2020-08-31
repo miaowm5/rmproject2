@@ -8,7 +8,8 @@ const handleSite = require('./site')
 const mainPath = path.join(__dirname, '../')
 
 const main = async ()=>{
-  await fse.emptyDir(path.join(mainPath, 'build'))
+  await fse.emptyDir(path.join(mainPath, 'build/api'))
+  await fse.emptyDir(path.join(mainPath, 'build/media'))
   const ruleData = await getRuleData(mainPath)
   await handleRule(mainPath, ruleData)
   await handleSite(mainPath, ruleData)
