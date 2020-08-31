@@ -33,6 +33,7 @@ jobs:
       with:
         ref: 'assets'
         path: './build/assets'
+        persist-credentials: false
     - name: build assets
       run: npm run buildAssets
     - name: deploy to assets branch if modify
@@ -40,4 +41,4 @@ jobs:
       with:
         deploy_type: 'backend-assets'
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.DEPLOY_PAT }}
