@@ -1,10 +1,16 @@
 # Build Backend API when master branch change
 
-name: Build Backend API
+name: Build API
 
 on:
   push:
     branches: [ master ]
+    paths:
+    - 'page/**'
+    - 'rule/**'
+    - 'site/**'
+    - '!rule/README.md'
+    - '!site/README.md'
   workflow_dispatch:
 
 jobs:
@@ -28,17 +34,3 @@ jobs:
         deploy_type: 'backend'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: checkout assets branch
-      uses: actions/checkout@v2
-      with:
-        ref: 'assets'
-        path: './build/assets'
-        persist-credentials: false
-    - name: build assets
-      run: npm run buildAssets
-    - name: deploy to assets branch if modify
-      uses: miaowm5/rmproject2@action
-      with:
-        deploy_type: 'backend-assets'
-      env:
-        GITHUB_TOKEN: ${{ secrets.DEPLOY_PAT }}

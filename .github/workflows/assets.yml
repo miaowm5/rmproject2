@@ -1,10 +1,12 @@
-# Build Backend API when master branch change
+# Upload latest assets to gh-pages
 
-name: Build Assets
+name: Assets Update
 
 on:
   push:
     branches: [ assets ]
+    paths-ignore:
+    - '.github/**'
   workflow_dispatch:
 
 jobs:
