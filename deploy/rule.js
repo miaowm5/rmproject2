@@ -28,9 +28,4 @@ module.exports = async (mainPath, ruleData)=>{
     taskList.push(fse.writeFile(path.join(targetPath, `${id}.json`), JSON.stringify(data)))
   })
   await Promise.all(taskList)
-
-  const targetMediaPath = path.join(mainPath, 'build/media/rule')
-  await fse.ensureDir(targetMediaPath)
-  await fse.emptyDir(targetMediaPath)
-  fse.copy(path.join(mainPath, 'rule/media'), targetMediaPath)
 }
