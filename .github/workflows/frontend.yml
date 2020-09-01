@@ -1,10 +1,15 @@
 # Build React front page when frontend branch change
 
-name: Build Frontend Page
+name: Build Frontend
 
 on:
   push:
     branches: [ frontend ]
+    paths-ignore:
+    - '.github/**'
+    - '.vscode/**'
+    - '.gitignore'
+    - 'README.md'
   workflow_dispatch:
 
 jobs:
