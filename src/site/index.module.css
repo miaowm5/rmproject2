@@ -1,5 +1,46 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: #333;
+  height: 100vh;
+}
+.main a{
+  color: #333;
+}
 .body{
-  max-width: 1024px;
   padding: 1.5em 0;
+  flex: 1;
+}
+.view{
+  max-width: 1280px;
+  flex: 1;
   margin: 0 auto;
+}
+.content{
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.articleWrap{
+  flex: 1;
+  position: relative;
+  padding: 0 1em;
+}
+.article img{
+  max-width: 100%;
+}
+.article{
+  display: flex;
+  min-height: 100%;
+}
+.article>*:nth-child(1){
+  flex: 2;
+}
+.article>*:nth-child(2){
+  flex: 1;
+}
+.articleContent{
+  padding: 1em 0;
 }

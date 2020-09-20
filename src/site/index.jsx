@@ -1,12 +1,14 @@
 
 import React, { useState } from 'react'
-import { Header, Error, Loading, Detail } from '../component'
+import { Error, Loading, Detail } from '../component'
 import { useAPI } from '../common'
+import Header from './header'
+import Title from './title'
+import Nav from './nav'
 import Edit from './edit'
 import styles from './index.module.css'
 
-const Main = ({ data })=><div>
-  {data.close && <p>【本素材站已关站或迁移到了其他地址，若有关于本站的新地址请报告给我们】</p>}
+const Main = ({ data })=><div className={styles.articleContent}>
   {data.logo && <div><img src={`./assets/site/${data.logo}`} alt="logo" /></div>}
   <p>站点名称：{data.name}</p>
   <p>站长：{data.owner}</p>
@@ -31,23 +33,30 @@ const Main = ({ data })=><div>
 </div>
 
 const Content = ({ data })=>{
-  const [edit, setEdit] = useState(false)
-  if (edit){ return <Edit.Main closeEdit={()=>setEdit(false)} data={data} /> }
-  return <>
-    <Main data={data} />
-    <Edit.Button openEdit={()=>setEdit(true)} />
-  </>
+  const [nav, setNav] = useState(0)
+  return <div className={styles.content}>
+    <Title data={data} />
+    <div className={styles.articleWrap}>
+      <div className={`${styles.view} ${styles.article}`}>
+        {nav === 0 && <Main data={data} />}
+        {nav === 1 && <Edit data={data} />}
+        <Nav nav={nav} setNav={setNav} />
+      </div>
+    </div>
+  </div>
 }
-
 const Body = ({ id })=>{
   const site = useAPI(`./api/site/${id}.json`)
-  return <div>
+  return <div className={styles.main}>
     <Header />
-    <div className={styles.body}>
-      {site.state === 'fail' && <Error title="get site fail" error={site.result} />}
-      {site.state === 'load' && <Loading />}
-      {site.state === 'success' && <Content data={site.result} />}
-    </div>
+    {site.state === 'success' ? <Content data={site.result} /> : <>
+      <div className={styles.body}>
+        <div className={styles.view}>
+          {site.state === 'fail' && <Error title="get site fail" error={site.result} />}
+          {site.state === 'load' && <Loading />}
+        </div>
+      </div>
+    </>}
   </div>
 }
 

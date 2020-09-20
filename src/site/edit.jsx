@@ -93,7 +93,7 @@ const CategoryInput = ({ value, onChange })=>{
   />
 }
 
-const Main = ({ closeEdit, data: originData })=>{
+export default ({ data: originData })=>{
   const [edit, setEdit] = useState(true)
   const [data, setData] = useState(()=>{
     const delValue = { id: undefined, ruleParse: undefined }
@@ -106,8 +106,7 @@ const Main = ({ closeEdit, data: originData })=>{
       return { ...oldData, ...changeValue }
     })
   }, [])
-  return <>
-    <div className={styles.button} onClick={closeEdit}>放弃编辑</div>
+  return <div className={styles.editBody}>
     {edit && <>
       <Input title="站长" value={data.owner} onChange={(v)=>update('owner', v)} />
       <Input title="站点地址" value={data.url} onChange={(v)=>update('url', v)} />
@@ -140,9 +139,5 @@ const Main = ({ closeEdit, data: originData })=>{
         rel="noopener noreferrer"
       >提交到 Github</a>
     </>}
-  </>
+  </div>
 }
-
-const Button = ({ openEdit })=><div className={styles.button} onClick={openEdit}>编辑文章</div>
-
-export default { Main, Button }

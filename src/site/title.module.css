@@ -1,0 +1,31 @@
+.main{
+  background-color: #f8f1ee;
+  padding: .5em 1em 2em;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+.view{
+  margin: 0 auto;
+  max-width: 1280px;
+}
+.name{
+  font-weight: normal;
+  font-size: 1.8em;
+  margin-bottom: .2em;
+}
+.name>span{
+  color: #666;
+  font-weight: normal;
+  font-size: .5em;
+  padding-left: .5em;
+}
+.tag{
+  font-size: .9em;
+  background-color: #c75b75;
+  padding: .5em .7em;
+  display: inline-block;
+  border-radius: 3px;
+  margin-right: .5em;
+  margin-bottom: 0;
+  color: white;
+}

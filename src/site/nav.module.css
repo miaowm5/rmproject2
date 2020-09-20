@@ -1,0 +1,17 @@
+.main{
+  border-left: 1px solid #ccc;
+  padding: 1em 0;
+  margin-left: -1px;
+}
+.item{
+  padding: 1em;
+  cursor: pointer;
+}
+.item.active{
+  background: linear-gradient(90deg,
+    #5b90c7 0,
+    #5b90c7 6%,
+    rgba(91,144,199,0)
+  );
+  color: white;
+}

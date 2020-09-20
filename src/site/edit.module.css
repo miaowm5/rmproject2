@@ -1,7 +1,7 @@
 .button{
   display: inline-block;
   padding: .5em 1em;
-  border: 1px solid white;
+  border: 1px solid #333;
   cursor: pointer;
   font-size: .9em
 }
@@ -12,12 +12,12 @@
   border: none;
   border-bottom: 1px solid #555;
   padding: 1em .7em .7em;
-  color: white;
+  color: #333;
 }
 .inputTitle{
   padding: 1.5em 0 .7em;
   font-size: .9em;
-  color: #999;
+  color: #666;
 }
 .inputList {
   display: flex;
@@ -44,7 +44,7 @@
   border: none;
   margin: 0;
   padding: 1em .7em .7em;
-  color: white;
+  color: #333;
 }
 .inputList > input:focus {
   outline: transparent;
@@ -64,12 +64,12 @@
   padding: 1em .7em .7em;
   cursor: pointer;
   user-select: none;
-  border-bottom: 1px solid #555;
-  transition: border-bottom 0.5s;
+  border-bottom: 1px solid #ccc;
+  transition: border-bottom 0.2s;
 }
 .inputCheckbox input:checked ~ span {
-  color: white;
-  border-bottom: 1px solid lightskyblue;
+  color: #333;
+  border-bottom: 1px solid #333;
 }
 .resultText{
   display: inline-block;
@@ -77,8 +77,11 @@
   background: none;
   border: 1px solid #555;
   padding: 1em .7em .7em;
-  color: white;
+  color: #333;
   resize: none;
   height: 25em;
   margin: 1em 0;
+}
+.editBody{
+  padding: 1em 0 3em;
 }
