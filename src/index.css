@@ -17,3 +17,16 @@ body {
 a {
   color: white;
 }
+*::-webkit-scrollbar{
+  width: 6px;
+  height: 8px;
+}
+*::-webkit-scrollbar-button{ display: none; }
+*::-webkit-scrollbar-track{ display: none; }
+*::-webkit-scrollbar-thumb{
+  background:#666;
+  border-radius:3px;
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}
