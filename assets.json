@@ -33,5 +33,20 @@
   "site/1.gif": "https://raw.githubusercontent.com/miaowm5/rmproject2/gh-pages/media/site/1.gif",
   "site/1000.png": "https://user-images.githubusercontent.com/7985604/91741692-a8315700-ebe7-11ea-9d2b-789f4f625292.png",
   "frontend/banner.jpg": "https://raw.githubusercontent.com/miaowm5/rmproject2/gh-pages/static/media/banner.4c5d3caa.jpg",
-  "frontend/tempData.json": "https://miaowm5.github.io/rmproject/tempData.json"  
+  "frontend/icon.min.css": "",
+  "frontend/icon/brand-icons.eot": "",
+  "frontend/icon/brand-icons.svg": "",
+  "frontend/icon/brand-icons.ttf": "",
+  "frontend/icon/brand-icons.woff": "",
+  "frontend/icon/brand-icons.woff2": "",
+  "frontend/icon/icons.eot": "",
+  "frontend/icon/icons.svg": "",
+  "frontend/icon/icons.ttf": "",
+  "frontend/icon/icons.woff": "",
+  "frontend/icon/icons.woff2": "",
+  "frontend/icon/outline-icons.eot": "",
+  "frontend/icon/outline-icons.svg": "",
+  "frontend/icon/outline-icons.ttf": "",
+  "frontend/icon/outline-icons.woff": "",
+  "frontend/icon/outline-icons.woff2": ""
 }
