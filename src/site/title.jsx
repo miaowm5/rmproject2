@@ -2,6 +2,11 @@
 import React from 'react'
 import styles from './title.module.css'
 
+const Back = ()=>{
+  const style = { backgroundImage: 'url(assets/frontend/back.jpg)' }
+  return <div className={styles.back} style={style} />
+}
+
 const Category = ({ site })=>{
   let { category } = site
   if (site.category2){
@@ -21,6 +26,7 @@ const Category = ({ site })=>{
 }
 
 export default ({ data })=><header className={styles.main}>
+  <Back />
   <div className={styles.view}>
     <h1 className={styles.name}>
       {data.name}

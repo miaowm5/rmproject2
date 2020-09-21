@@ -1,29 +1,8 @@
 .main{
-  background-color: #2a2a3c;
-  color: white;
+  background-color: white;
   padding: 1em;
   position: relative;
-}
-.banner{
-  width: 70%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-size: 100%;
-  background-size: cover;
-}
-.banner::after{
-  content: "";
-  position: absolute;
-  background: linear-gradient(90deg,
-    #2a2a3c 0,
-    #2a2a3c 6%,
-    rgba(45,42,60,.3)
-  );
-  height: 100%;
-  width: 105%;
-  right: 0;
+  border-bottom: 1px solid #ccc;
 }
 .view{
   margin: 0 auto;
@@ -32,7 +11,11 @@
 }
 .main a.name{
   font-size: 1.2em;
-  color: white;
+  color: #333;
   text-decoration: none;
   font-weight: bolder;
+  transition: color .5s;
+}
+.main a.name:hover{
+  color: #c75b75;
 }

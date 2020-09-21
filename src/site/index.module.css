@@ -27,6 +27,13 @@
   flex: 1;
   position: relative;
   padding: 0 1em;
+  background: linear-gradient(
+    90deg,
+    white 0%,
+    white 50%,
+    #f8f1ee 51%,
+    #f8f1ee 100%
+  );
 }
 .article img{
   max-width: 100%;
@@ -34,13 +41,15 @@
 .article{
   display: flex;
   min-height: 100%;
+  background: white;
 }
 .article>*:nth-child(1){
   flex: 2;
 }
 .article>*:nth-child(2){
   flex: 1;
+  max-width: 20em;
 }
 .articleContent{
-  padding: 1em 0;
+  padding: 1em 2em 3em 0;
 }

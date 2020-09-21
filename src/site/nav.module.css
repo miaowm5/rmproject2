@@ -2,16 +2,18 @@
   border-left: 1px solid #ccc;
   padding: 1em 0;
   margin-left: -1px;
+  background-color: #f8f1ee;
 }
 .item{
   padding: 1em;
   cursor: pointer;
+  max-width: 20em;
 }
 .item.active{
-  background: linear-gradient(90deg,
-    #5b90c7 0,
-    #5b90c7 6%,
-    rgba(91,144,199,0)
-  );
-  color: white;
+  cursor: default;
+  background: white;
+  border-radius: 0 10px 10px 0;
+  margin-left: -1px;
+  border: 1px solid #ccc;
+  border-left: none;
 }
