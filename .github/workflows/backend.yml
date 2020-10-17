@@ -9,8 +9,10 @@ on:
     - 'page/**'
     - 'rule/**'
     - 'site/**'
+    - 'deploy/**'
     - '!rule/README.md'
     - '!site/README.md'
+    - '!deploy/README.md'
   workflow_dispatch:
 
 jobs:
