@@ -9,8 +9,8 @@ on:
   push:
     branches: [master]
     paths:
-    - 'deploy/**'    
-    - '!deploy/README.md'    
+    - 'deploy/**'
+    - '!deploy/README.md'
   workflow_dispatch:
 
 jobs:
