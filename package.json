@@ -13,7 +13,7 @@
     "eslint-plugin-import": "^2.22.0"
   },
   "scripts": {
-    "build": "node deploy/index.js",
+    "build": "node deploy/api/index.js",
     "buildAssets": "node deploy/assets.js",
     "devServer": "npm run build && npx anywhere -s -d build",
     "devAssets": "node deploy/devAssets.js",

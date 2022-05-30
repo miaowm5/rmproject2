@@ -2,6 +2,7 @@
 const fse = require('fs-extra')
 const path = require('path')
 
+// 解析规约数据
 const handleRule = (config, siteID, ruleData)=>{
   if (!config.rule){ config.rule = [] }
   if (!config.rule2){ config.rule2 = [] }
@@ -17,7 +18,7 @@ const handleRule = (config, siteID, ruleData)=>{
   return ruleBasic.concat(config.rule2)
 }
 
-module.exports = async (mainPath, ruleData)=>{
+const main = async (mainPath, ruleData)=>{
   const sitePath = path.join(mainPath, 'site')
   const targetPath = path.join(mainPath, 'build/api')
   const siteTargetPath = path.join(targetPath, 'site')
@@ -58,6 +59,11 @@ module.exports = async (mainPath, ruleData)=>{
     taskList.push(fse.writeFile(path.join(siteTargetPath, `${id}.json`), JSON.stringify(config)))
   })
 
+  // 将单独的站点数据储存到 build/api/site 目录下
   await Promise.all(taskList)
+
+  // 将站点的简化数据储存到 build/api/site.json 中，供前端快速查询
   await fse.writeFile(path.join(targetPath, 'site.json'), JSON.stringify(result))
 }
+
+module.exports = main
