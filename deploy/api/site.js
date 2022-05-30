@@ -19,7 +19,7 @@ const handleRule = (config, siteID, ruleData)=>{
 }
 
 const main = async (mainPath, ruleData)=>{
-  const sitePath = path.join(mainPath, 'site')
+  const sitePath = path.join(mainPath, 'api/site')
   const targetPath = path.join(mainPath, 'build/api')
   const siteTargetPath = path.join(targetPath, 'site')
   await fse.ensureDir(siteTargetPath)

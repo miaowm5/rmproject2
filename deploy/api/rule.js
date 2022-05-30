@@ -27,6 +27,7 @@ const saveBriefRule = async (mainPath, ruleData)=>{
 const saveSingleRule = async (mainPath, ruleData)=>{
   const targetPath = path.join(mainPath, 'build/api/rule')
   await fse.ensureDir(targetPath)
+  await fse.emptyDir(targetPath)
   const taskList = []
   Object.keys(ruleData).forEach((id)=>{
     const data = ruleData[id]
