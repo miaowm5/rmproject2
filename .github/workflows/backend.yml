@@ -22,13 +22,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '16'
-    - name: install dep
-      run: npm ci
-    - name: build rule
-      run: npm run build
+    - name: build backend
+      run: npm ci && npm run build
     - name: deploy to page branch
-      uses: miaowm5/rmproject2@action
-      with:
-        deploy_type: 'backend'
+      run: npm ci && npm run deploy
       env:
+        DEPLOY_TYPE: BACKEND
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -18,14 +18,14 @@ const getRuleData = async (mainPath)=>{
   return result
 }
 
-// 将规约的简化数据储存到 build/api/rule.json 中，供前端规约一览界面使用
+// 将规约的简化数据储存到 dist/api/rule.json 中，供前端规约一览界面使用
 const saveBriefRule = async (mainPath, ruleData)=>{
-  await fse.writeFile(path.join(mainPath, 'build/api/rule.json'), JSON.stringify(ruleData))
+  await fse.writeFile(path.join(mainPath, 'dist/api/rule.json'), JSON.stringify(ruleData))
 }
 
-// 将单独的规约数据储存到 build/api/rule 目录下，会对规约的 detail 属性进行解析
+// 将单独的规约数据储存到 dist/api/rule 目录下，会对规约的 detail 属性进行解析
 const saveSingleRule = async (mainPath, ruleData)=>{
-  const targetPath = path.join(mainPath, 'build/api/rule')
+  const targetPath = path.join(mainPath, 'dist/api/rule')
   await fse.ensureDir(targetPath)
   await fse.emptyDir(targetPath)
   const taskList = []

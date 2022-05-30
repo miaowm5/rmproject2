@@ -20,9 +20,8 @@ const handleRule = (config, siteID, ruleData)=>{
 
 const main = async (mainPath, ruleData)=>{
   const sitePath = path.join(mainPath, 'api/site')
-  const targetPath = path.join(mainPath, 'build/api')
+  const targetPath = path.join(mainPath, 'dist/api')
   const siteTargetPath = path.join(targetPath, 'site')
-  await fse.ensureDir(siteTargetPath)
   await fse.emptyDir(siteTargetPath)
 
   const result = []
@@ -59,7 +58,7 @@ const main = async (mainPath, ruleData)=>{
     taskList.push(fse.writeFile(path.join(siteTargetPath, `${id}.json`), JSON.stringify(config)))
   })
 
-  // 将单独的站点数据储存到 build/api/site 目录下
+  // 将单独的站点数据储存到 dist/api/site 目录下
   await Promise.all(taskList)
 
   // 将站点的简化数据储存到 build/api/site.json 中，供前端快速查询
