@@ -5,7 +5,7 @@ const getRuleData = require('./getRuleData')
 const handleRule = require('./rule')
 const handleSite = require('./site')
 
-const mainPath = path.join(__dirname, '../')
+const mainPath = path.join(__dirname, '../api')
 
 const main = async ()=>{
   await fse.emptyDir(path.join(mainPath, 'build/api'))

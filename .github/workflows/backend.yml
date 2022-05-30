@@ -6,13 +6,9 @@ on:
   push:
     branches: [ master ]
     paths:
-    - 'page/**'
-    - 'rule/**'
-    - 'site/**'
-    - 'deploy/**'
-    - '!rule/README.md'
-    - '!site/README.md'
-    - '!deploy/README.md'
+    - 'api/**'
+    - '!api/rule/README.md'
+    - '!api/site/README.md'
   workflow_dispatch:
 
 jobs:
