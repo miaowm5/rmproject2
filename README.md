@@ -3,7 +3,6 @@
 ![Build API](https://github.com/miaowm5/rmproject2/workflows/Build%20API/badge.svg)
 ![Build Frontend](https://github.com/miaowm5/rmproject2/workflows/Build%20Frontend/badge.svg?branch=frontend)
 ![Download Assets](https://github.com/miaowm5/rmproject2/workflows/Download%20Assets/badge.svg)
-![Assets Update](https://github.com/miaowm5/rmproject2/workflows/Assets%20Update/badge.svg?branch=assets)
 
 RPG 制作大师授权素材推广计划 2.0 项目，包含前后端所有的数据
 

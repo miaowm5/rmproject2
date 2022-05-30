@@ -4,11 +4,17 @@ const path = require('path')
 const fs = require('fs-extra')
 const getRemoteURL = require('./remoteUrl')
 const git = require('./git')
+const updateAssets = require('./assets')
 
 const dirname = path.join(__dirname, '../../dist')
 const branch = 'gh-pages'
 
 const update = async (oldDir, newDir)=>{
+  // 更新二进制数据
+  if (process.env.DEPLOY_TYPE === 'ASSETS'){
+    await updateAssets(newDir)
+    return
+  }
   // （默认）更新后端 API
   await fs.emptyDir(path.join(newDir, 'api'))
   await fs.copy(path.join(dirname, 'api'), path.join(newDir, 'api'))

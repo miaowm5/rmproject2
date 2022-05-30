@@ -17,7 +17,6 @@
   "scripts": {
     "build": "node deploy/api/index.js",
     "deploy": "node deploy/git/index.js",
-    "buildAssets": "node deploy/assets.js",
     "devServer": "npm run build && npx anywhere -s -d build",
     "devAssets": "node deploy/devAssets.js",
     "lint": "eslint --ext .js deploy",

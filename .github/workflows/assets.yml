@@ -1,12 +1,12 @@
-# Upload latest assets to gh-pages
+# Update assets branch when assets.json change
 
-name: Assets Update
+name: Download Assets
 
 on:
   push:
-    branches: [ assets ]
-    paths-ignore:
-    - '.github/**'
+    branches: [ master ]
+    paths:
+    - 'assets.json'
   workflow_dispatch:
 
 jobs:
@@ -14,10 +14,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: deploy to page branch
-      uses: miaowm5/rmproject2@action
+    - name: checkout main branch
+      uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v1
       with:
-        deploy_type: 'assets'
+        node-version: '16'
+    - name: deploy to page branch
+      run: npm ci && npm run deploy
       env:
+        DEPLOY_TYPE: ASSETS
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
