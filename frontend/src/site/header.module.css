@@ -1,0 +1,21 @@
+.main{
+  background-color: white;
+  padding: 1em;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+.view{
+  margin: 0 auto;
+  max-width: 1280px;
+  position: relative;
+}
+.main a.name{
+  font-size: 1.2em;
+  color: #333;
+  text-decoration: none;
+  font-weight: bolder;
+  transition: color .5s;
+}
+.main a.name:hover{
+  color: #c75b75;
+}

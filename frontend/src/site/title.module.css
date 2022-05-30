@@ -1,0 +1,53 @@
+.main{
+  background-color: rgb(36,35,46);
+  color: white;
+  padding: .5em 1em 2em;
+  position: relative;
+}
+.view{
+  margin: 0 auto;
+  max-width: 1280px;
+  position: relative;
+}
+.name{
+  font-weight: normal;
+  font-size: 1.8em;
+  margin-bottom: .2em;
+}
+.name>span{
+  color: #ccc;
+  font-weight: normal;
+  font-size: .5em;
+  padding-left: .5em;
+}
+.tag{
+  font-size: .9em;
+  background-color: #c75b75;
+  padding: .5em .7em;
+  display: inline-block;
+  border-radius: 3px;
+  margin-right: .5em;
+  margin-bottom: 0;
+  color: white;
+}
+.back{
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-size: 100%;
+  background-size: cover;
+}
+.back::after{
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg,
+    rgb(36,35,46) 0,
+    rgb(36,35,46) 6%,
+    rgba(36,35,46,.3)
+  );
+  height: 100%;
+  width: 105%;
+  right: 0;
+}

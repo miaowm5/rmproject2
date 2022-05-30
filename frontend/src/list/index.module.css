@@ -1,0 +1,25 @@
+.body{
+  max-width: 1024px;
+  padding: 1.5em 0;
+  margin: 0 auto;
+}
+.title{
+  display: inline-block;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: white;
+}
+.title:hover{
+  color: #ccc;
+}
+.item{
+  padding: 0 1em .5em;
+  border-bottom: 1px solid #555;
+}
+.tag{
+  background-color: #5d4d96;
+  padding: .4em .5em;
+  display: inline-block;
+  border-radius: 5px;
+  margin-right: .5em;
+}

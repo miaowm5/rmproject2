@@ -1,0 +1,35 @@
+.body{
+  padding: 0 0 1.5em;
+  margin: 0 auto;
+}
+.main{
+  display: flex;
+  max-height: calc(100vh - 13em);
+  overflow: hidden;
+}
+.list{
+  flex: 1 25%;
+  overflow: auto;
+}
+.content{
+  flex: 1 75%;
+  padding-left: 2em;
+  border-left: 1px solid #555;
+  overflow: auto;
+}
+.listMain{
+  padding: 0 1em;
+}
+.listTab{
+  display: flex;
+  border-bottom: 1px solid #555;
+}
+.listTab>*{
+  flex: 1;
+  padding: 1em;
+  cursor: pointer;
+  text-align: center;
+}
+.listTab>*:first-child{
+  border-right: 1px solid #555;
+}

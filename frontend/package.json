@@ -1,0 +1,88 @@
+{
+  "name": "project",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^19.0.4",
+    "react-scripts": "5.0.1",
+    "sass": "^1.49.9"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "airbnb"
+    ],
+    "rules": {
+      "linebreak-style": "off",
+      "space-before-blocks": "off",
+      "arrow-spacing": "off",
+      "max-len": "off",
+      "no-underscore-dangle": "off",
+      "lines-between-class-members": "off",
+      "keyword-spacing": "off",
+      "no-console": "off",
+      "class-methods-use-this": "off",
+      "consistent-return": "off",
+      "no-param-reassign": "off",
+      "object-curly-newline": "off",
+      "react/prop-types": "off",
+      "react/no-array-index-key": "off",
+      "react/jsx-wrap-multilines": "off",
+      "react/jsx-closing-tag-location": "off",
+      "react/jsx-one-expression-per-line": "off",
+      "react/function-component-definition": "off",
+      "jsx-a11y/click-events-have-key-events": "off",
+      "jsx-a11y/no-static-element-interactions": "off",
+      "jsx-a11y/anchor-is-valid": "off",
+      "semi": "off",
+      "no-multiple-empty-lines": [
+        "warn",
+        {
+          "max": 1,
+          "maxEOF": 0
+        }
+      ],
+      "comma-dangle": "warn",
+      "object-curly-spacing": "warn",
+      "comma-spacing": "warn",
+      "prefer-const": "warn",
+      "space-infix-ops": "warn",
+      "space-before-function-paren": "warn",
+      "prefer-destructuring": "warn",
+      "object-property-newline": "warn",
+      "block-spacing": "warn",
+      "arrow-body-style": "warn",
+      "no-unused-vars": "warn",
+      "padded-blocks": "warn",
+      "key-spacing": "warn",
+      "react/jsx-indent": "warn",
+      "react/jsx-tag-spacing": "warn",
+      "quotes": "warn",
+      "indent": "warn"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "./",
+  "proxy": "https://miaowm5.github.io/rmproject2/"
+}

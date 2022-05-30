@@ -1,0 +1,19 @@
+.main{
+  border-left: 1px solid #ccc;
+  padding: 1em 0;
+  margin-left: -1px;
+  background-color: #f8f1ee;
+}
+.item{
+  padding: 1em;
+  cursor: pointer;
+  max-width: 20em;
+}
+.item.active{
+  cursor: default;
+  background: white;
+  border-radius: 0 10px 10px 0;
+  margin-left: -1px;
+  border: 1px solid #ccc;
+  border-left: none;
+}

@@ -1,0 +1,32 @@
+
+@import-normalize;
+
+*{
+  box-sizing: border-box;
+  font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  position: relative;
+  margin: 0;
+  background-color: #151414;
+  color: white;
+}
+a {
+  color: white;
+}
+*::-webkit-scrollbar{
+  width: 6px;
+  height: 8px;
+}
+*::-webkit-scrollbar-button{ display: none; }
+*::-webkit-scrollbar-track{ display: none; }
+*::-webkit-scrollbar-thumb{
+  background:#666;
+  border-radius:3px;
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}

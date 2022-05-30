@@ -1,0 +1,87 @@
+.button{
+  display: inline-block;
+  padding: .5em 1em;
+  border: 1px solid #333;
+  cursor: pointer;
+  font-size: .9em
+}
+.input{
+  display: inline-block;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #555;
+  padding: 1em .7em .7em;
+  color: #333;
+}
+.inputTitle{
+  padding: 1.5em 0 .7em;
+  font-size: .9em;
+  color: #666;
+}
+.inputList {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  min-height: 3em;
+}
+.inputListItem {
+  display: inline-block;
+  list-style: none;
+  width: auto;
+  margin: .7em .2em .4em;
+  padding: .3em;
+  color: white;
+  background: #333;
+  cursor: pointer;
+  user-select: none;
+}
+.inputList > input {
+  flex: 1;
+  display: inline-block;
+  width: auto;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 1em .7em .7em;
+  color: #333;
+}
+.inputList > input:focus {
+  outline: transparent;
+}
+.inputListItemRecommend {
+  background-color: #999;
+}
+.inputCheckbox {
+  display: inline-block;
+  margin-right: .7em;
+}
+.inputCheckbox input {
+  display: none;
+}
+.inputCheckbox span {
+  margin: 0;
+  padding: 1em .7em .7em;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid #ccc;
+  transition: border-bottom 0.2s;
+}
+.inputCheckbox input:checked ~ span {
+  color: #333;
+  border-bottom: 1px solid #333;
+}
+.resultText{
+  display: inline-block;
+  width: 100%;
+  background: none;
+  border: 1px solid #555;
+  padding: 1em .7em .7em;
+  color: #333;
+  resize: none;
+  height: 25em;
+  margin: 1em 0;
+}
+.editBody{
+  padding: 1em 2em 3em 0;
+}
