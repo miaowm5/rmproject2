@@ -15,6 +15,16 @@ const update = async (oldDir, newDir)=>{
     await updateAssets(newDir)
     return
   }
+  // 更新前端数据
+  if (process.env.DEPLOY_TYPE === 'FRONTEND'){
+    // 用前端打包的文件覆盖所有内容
+    await fs.emptyDir(newDir)
+    await fs.copy(path.join(dirname, 'frontend'), newDir)
+    // 保留 assets 和 api 文件夹
+    await fs.copy(path.join(oldDir, 'assets'), path.join(newDir, 'assets'))
+    await fs.copy(path.join(oldDir, 'api'), path.join(newDir, 'api'))
+    return
+  }
   // （默认）更新后端 API
   await fs.emptyDir(path.join(newDir, 'api'))
   await fs.copy(path.join(dirname, 'api'), path.join(newDir, 'api'))

@@ -4,12 +4,9 @@ name: Build Frontend
 
 on:
   push:
-    branches: [ frontend ]
-    paths-ignore:
-    - '.github/**'
-    - '.vscode/**'
-    - '.gitignore'
-    - 'README.md'
+    branches: [ master ]
+    paths:
+    - 'frontend/**'
   workflow_dispatch:
 
 jobs:
@@ -22,13 +19,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '16'
-    - name: install dep
-      run: npm ci
     - name: build react
-      run: npm run build
+      run: npm ci && npm run build
+      working-directory: ./frontend
     - name: deploy to page branch
-      uses: miaowm5/rmproject2@action
-      with:
-        deploy_type: 'frontend'
+      run: npm ci && npm run deploy
       env:
+        DEPLOY_TYPE: FRONTEND
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
