@@ -12,13 +12,13 @@ const branch = 'gh-pages'
 const update = async (oldDir, newDir)=>{
   // 更新二进制数据
   if (process.env.DEPLOY_TYPE === 'ASSETS'){
+    await fs.copy(oldDir, newDir)
     await updateAssets(newDir)
     return
   }
   // 更新前端数据
   if (process.env.DEPLOY_TYPE === 'FRONTEND'){
     // 用前端打包的文件覆盖所有内容
-    await fs.emptyDir(newDir)
     await fs.copy(path.join(dirname, 'frontend'), newDir)
     // 保留 assets 和 api 文件夹
     await fs.copy(path.join(oldDir, 'assets'), path.join(newDir, 'assets'))
@@ -26,6 +26,7 @@ const update = async (oldDir, newDir)=>{
     return
   }
   // （默认）更新后端 API
+  await fs.copy(oldDir, newDir)
   await fs.emptyDir(path.join(newDir, 'api'))
   await fs.copy(path.join(dirname, 'api'), path.join(newDir, 'api'))
 }
@@ -49,9 +50,6 @@ const main = async ()=>{
   process.chdir(newDir)
   await git(['init'])
   await git(['checkout', '--orphan', branch])
-
-  // 将上一次的提交结果拷贝到 newDir
-  await fs.copy(oldDir, newDir)
 
   // 根据本次的生成结果更新 newDir
   await update(oldDir, newDir)
