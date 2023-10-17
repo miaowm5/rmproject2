@@ -9,7 +9,6 @@
     "dotenv": "^16.0.1"
   },
   "devDependencies": {
-    "anywhere": "^1.5.0",
     "eslint": "^8.16.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.22.0"
@@ -17,8 +16,6 @@
   "scripts": {
     "build": "node deploy/api/index.js",
     "deploy": "node deploy/git/index.js",
-    "devServer": "npm run build && npx anywhere -s -d build",
-    "devAssets": "node deploy/devAssets.js",
     "lint": "eslint --ext .js deploy",
     "lint-fix": "eslint --fix --ext .js deploy"
   },
