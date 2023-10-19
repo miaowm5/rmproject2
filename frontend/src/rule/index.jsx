@@ -21,7 +21,7 @@ const RuleMain = ({ id })=>{
       {rule.state === 'fail' && <Error title="get site fail" error={rule.result} />}
       {rule.state === 'load' && <Loading />}
       {rule.state === 'success' && <Rule rule={rule.result} />}
-      <a href={`${process.env.REACT_APP_SITE_REPO_URL}/edit/master/rule/${id}.json`} target="_blank" rel="noopener noreferrer">在 github 上编辑</a>
+      <a href={`${process.env.VITE_SITE_REPO_URL}/edit/master/rule/${id}.json`} target="_blank" rel="noopener noreferrer">在 github 上编辑</a>
     </div>
   </>
 }
