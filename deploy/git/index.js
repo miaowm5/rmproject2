@@ -7,7 +7,7 @@ const git = require('./git')
 const updateAssets = require('./assets')
 
 const dirname = path.join(__dirname, '../../dist')
-const branch = 'gh-pages'
+const branch = 'build'
 
 const update = async (oldDir, newDir)=>{
   // 更新二进制数据

@@ -134,7 +134,7 @@ export default ({ data: originData })=>{
       />
       <a
         className={styles.button}
-        href={`${process.env.REACT_APP_SITE_REPO_URL}/edit/master/site/${originData.id}.json`}
+        href={`${process.env.VITE_SITE_REPO_URL}/edit/master/site/${originData.id}.json`}
         target="_blank"
         rel="noopener noreferrer"
       >提交到 Github</a>
